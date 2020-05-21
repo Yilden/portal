@@ -1,0 +1,17 @@
+{
+  "localizedName": "Power Circle",
+  "description": "Does power stuff, works like cables.",
+  "laserRange": 0,
+  "maxNodes": 0,
+  "outputsPower": true,
+  "consumesPower": true,
+  "consumes": {
+    "power": 0.05
+  },
+  "size": 1,
+  "solid": false,
+  "buildVisibility": "sandboxOnly",
+  "hasShadow": false,
+  "fillsTile": false,
+  "destructible": false
+}
