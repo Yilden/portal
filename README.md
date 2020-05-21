@@ -1,6 +1,6 @@
 ### Aperture Science
-Aperture Science for except it's Mindustry, made it public because why not?
 
+This is Aperture Science from the Portal series badly designed for Mindustry.
 
 
 
@@ -14,3 +14,5 @@ Aperture Science for except it's Mindustry, made it public because why not?
 
 
 # h
+
+Ignore the **h**s
