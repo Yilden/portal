@@ -17,5 +17,6 @@
   ],
   "breakable": false,
   "destructible": false,
-  "buildVisibility": "sandboxOnly"
+  "buildVisibility": "sandboxOnly",
+  "category": "power"
 }
