@@ -3,7 +3,7 @@ const aColor = Color.valueOf("f7f7f7");
 
 const conductor = new StatusEffect("conductor");
   conductor.damageMultiplier = 1;
-  conductor.speedMultiplier = 1.3;
+  conductor.speedMultiplier = 1;
   conductor.armorMultiplier = 1;
   conductor.damage = 0;
   conductor.color = bColor;
