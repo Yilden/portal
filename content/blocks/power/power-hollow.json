@@ -1,6 +1,6 @@
 {
-  "localizedName": "Power Circle",
-  "description": "Does power stuff, works like cables.",
+  "localizedName": "Power Hollow",
+  "description": "Does power stuff, works like cables. Shaped like a ring.",
   "laserRange": 0,
   "maxNodes": 0,
   "outputsPower": true,
