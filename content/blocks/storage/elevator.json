@@ -9,5 +9,6 @@
  "destructible": false,
  "breakable": false,
  "solid": true,
+ "size": 3,
  "buildVisibility": "hidden"
 }
