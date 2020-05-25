@@ -1,6 +1,6 @@
 # Aperture Science
 
-This is Aperture Science from the Portal series badly designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers.
+This is Aperture Science from the Portal series badly designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers. Join the Discord server for ~~extra suffering~~ updates.
 
 ### List of Contents
    
