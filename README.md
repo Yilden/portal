@@ -83,7 +83,38 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
   </tr>
 </tbody>
 </table>
-
+**Liquids**
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Function</th>
+    <th>Note</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Cleansing Gel</td>
+    <td>Erases any type of mobility gels.</td>
+    <td>Not here yet.</td>
+  </tr>
+  <tr>
+    <td>Conversion Gel</td>
+    <td>Enables portal sticking into this liquid.</td>
+    <td>There's no portal yet.</td>
+  </tr>
+  <tr>
+    <td>Propulsion Gel</td>
+    <td>Increases speed of any unit on this liquid.</td>
+    <td>Yes.</td>
+  </tr>
+  <tr>
+    <td>Propulsion Gel</td>
+    <td>?</td>
+    <td>Need replacement. Jump boost doesn't exist.</td>
+  </tr>
+</tbody>
+</table>
 
 
 
