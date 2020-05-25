@@ -5,33 +5,33 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 ### List
    
 **Environment**
-<table class="tg">
+<table>
 <thead>
   <tr>
-    <th class="tg-z6ao">Name</th>
-    <th class="tg-z6ao">Function</th>
-    <th class="tg-z6ao">Note</th>
+    <th>Name</th>
+    <th>Function</th>
+    <th>Note</th>
   </tr>
   <tr>
-    <td class="tg-lj4e">Black Tile</td>
-    <td class="tg-lj4e">Black colored tile.</td>
-    <td class="tg-lj4e">May cause glitches.</td>
+    <td>Black Tile</td>
+    <td>Black colored tile.</td>
+    <td>May cause glitches.</td>
   </tr>
   <tr>
-    <td class="tg-lj4e">White Tile</td>
-    <td class="tg-lj4e">White colored tile.</td>
-    <td class="tg-lj4e">May cause glitches.</td>
+    <td>White Tile</td>
+    <td>White colored tile.</td>
+    <td>May cause glitches.</td>
   </tr>
   <tr>
-    <td class="tg-lj4e">Squared Tile</td>
-    <td class="tg-lj4e">Four squared style tile.</td>
-    <td class="tg-lj4e">May cause glitches.</td>
+    <td>Squared Tile</td>
+    <td>Four squared style tile.</td>
+    <td>May cause glitches.</td>
   </tr>
 </thead>
 </table>
 
 **Power**
-<table class="tg">
+<table>
 <thead>
   <tr>
     <th>Name</th>
@@ -57,7 +57,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 </table>
 
 **Producer**
-<table class="tg">
+<table>
 <thead>
   <tr>
     <th>Name</th>
