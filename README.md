@@ -30,7 +30,7 @@ Environment
 </thead>
 </table>
 Power
-<table>
+<table class="tg">
 <thead>
   <tr>
     <th>Name</th>
