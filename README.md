@@ -1,4 +1,6 @@
 # Aperture Science
+[![Discord](https://img.shields.io/discord/704355237246402721)](https://discord.gg/RCCVQFW)
+
 
 This is Aperture Science from the Portal series badly designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers. Join the Discord server for ~~extra suffering~~ updates.
 
