@@ -6,8 +6,8 @@
  "hasItems": false,
  "targetable": false,
  "activeSoundVolume": 0.4,
- "destructible" false,
+ "destructible": false,
  "breakable": false,
  "solid": true,
- "buildVisibility": hidden
+ "buildVisibility": "hidden"
 }
