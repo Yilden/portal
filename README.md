@@ -57,7 +57,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 </table>
 
 **Producer**
-<table>
+<table class="tg">
 <thead>
   <tr>
     <th>Name</th>
