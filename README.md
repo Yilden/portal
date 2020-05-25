@@ -56,6 +56,34 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 </thead>
 </table>
 
+**Producer**
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Function</th>
+    <th>Note</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Companion Cube Launcher</td>
+    <td>Launches companion cube.</td>
+    <td>Might add a new effect.</td>
+  </tr>
+  <tr>
+    <td>Storage Cube </td>
+    <td>Launches storage cube.</td>
+    <td>Might also add a new effect.</td>
+  </tr>
+  <tr>
+    <td>Sentry Deployer</td>
+    <td>Deploys sentry unit, can be rotated.</td>
+    <td>h</td>
+  </tr>
+</tbody>
+</table>
+
 
 
 
