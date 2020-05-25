@@ -39,17 +39,17 @@
 "hitsizeTile": 4,
 "speed": 0,
 "range": 20,
-"attackLength":	25,
+"attackLength": 25,
 "rotatespeed": 0,
 "baseRotateSpeed": 0,
-"shootCone":	6,
+"shootCone": 6,
 "mass":	1,
 "flying": false,
 "targetAir": true,
 "drag":	0.1,
 "maxVelocity": 3,
-"retreatPercent":	0,
+"retreatPercent": 0,
 "itemCapacity":	0,
 "buildPower":	0,
-"minePower":	0
+"minePower": 0
 }
