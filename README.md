@@ -38,19 +38,19 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
     <th>Note</th>
   </tr>
   <tr>
-    <td>Aperture Science Heavy Duty Floor Button</td>
-    <td>Black colored tile</td>
-    <td>May cause glitches</td>
+    <td>Rectangular Heavy Duty Super Button</td>
+    <td>Outputs power whenever something is on it or even <span style="font-style:italic">above</span><span style="font-style:normal"> it.</span></td>
+    <td>Works fine, for now.</td>
   </tr>
   <tr>
-    <td>White Tile</td>
-    <td>White colored tile</td>
-    <td>May cause glitches</td>
+    <td>Power Circle</td>
+    <td>Transfers power to other power circle (or power hollow). Only works when connected or placed next to each other.</td>
+    <td>It works.</td>
   </tr>
   <tr>
-    <td>Squared Tile</td>
-    <td>Four squared style tile</td>
-    <td>May cause glitches</td>
+    <td>Power Hollow</td>
+    <td>Works like power circle, except it's now shaped like a ring.</td>
+    <td>Linear filtering breaks it.</td>
   </tr>
 </thead>
 </table>
