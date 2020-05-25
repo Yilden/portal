@@ -7,7 +7,7 @@
   "size": 2,
   "maxSpawn": 1,
   "unitType": "sentry",
-  "rotateable": true,
+  "rotate": true,
   "consumes": {
     "power": 0.05
   },
