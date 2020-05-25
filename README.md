@@ -2,7 +2,7 @@
 
 This is Aperture Science from the Portal series badly designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers.
 
-### List
+### List of Contents
    
 **Environment**
 <table>
@@ -113,6 +113,34 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
     <td>Propulsion Gel</td>
     <td>?</td>
     <td>Need replacement. Jump boost doesn't exist.</td>
+  </tr>
+</tbody>
+</table>
+
+**Units**
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Function</th>
+    <th>Note</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Weighted Companion Cube</td>
+    <td>Works like weighted storage cube does. Now it had a heart and it's pink.</td>
+    <td>Might add new sounds and effects</td>
+  </tr>
+  <tr>
+    <td>Weighted Storage Cube</td>
+    <td>Everybody knows how to use this already.</td>
+    <td>I don't know about this one.</td>
+  </tr>
+  <tr>
+    <td>Sentry Turret</td>
+    <td>Sentry unit that can't rotate and move. Shoots target with 36 bullets per second.</td>
+    <td>Still in development. You can test it, though.</td>
   </tr>
 </tbody>
 </table>
