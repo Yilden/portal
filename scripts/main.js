@@ -23,6 +23,6 @@
   //require("liquids/pure");
   
 //units
-  //require("units/sentry");
+  require("units/sentry");
   require("units/storagecube");
   require("units/compcube");
