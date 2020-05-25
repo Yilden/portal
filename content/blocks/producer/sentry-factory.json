@@ -1,0 +1,22 @@
+{
+  "type": "UnitFactory",
+  "localizedName": "Sentry Deployer",
+  "description": "Deploys sentry unit that stands still.",
+  "produceTime": 1,
+  "launchVelocity": 0,
+  "size": 2,
+  "maxSpawn": 1,
+  "unitType": "sentry",
+  "rotateable": true,
+  "consumes": {
+    "power": 0.05
+  },
+  "requirements": [
+    {"item": "copper", "amount": 400},
+    {"item": "lead", "amount": 450},
+    {"item": "silicon", "amount": 420}
+  ],
+  "breakable": false,
+  "destructible": false,
+  "buildVisibility": "sandboxOnly"
+}
