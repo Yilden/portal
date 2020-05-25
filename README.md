@@ -4,10 +4,10 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 
 ### List
    
+Environment
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-rshs" rowspan="4">Environment</th>
     <th class="tg-z6ao">Name</th>
     <th class="tg-z6ao">Function</th>
     <th class="tg-z6ao">Note</th>
@@ -29,10 +29,10 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
   </tr>
 </thead>
 </table>
+Power
 <table>
 <thead>
   <tr>
-    <th rowspan="4">Power</th>
     <th>Name</th>
     <th>Function</th>
     <th>Note</th>
