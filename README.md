@@ -4,7 +4,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 
 ### List
    
-Environment
+**Environment**
 <table class="tg">
 <thead>
   <tr>
@@ -30,7 +30,7 @@ Environment
 </thead>
 </table>
 
-Power
+**Power**
 <table class="tg">
 <thead>
   <tr>
