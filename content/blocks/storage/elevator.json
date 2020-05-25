@@ -1,0 +1,13 @@
+{
+ "type": "CoreBlock",
+ "name": "Aperture Science Elevator",
+ "description": "Works like a normal elevator, placed in the start of the test chamber and in the chamberlock.",
+ "mech": "alpha-mech",
+ "hasItems": false,
+ "targetable": false,
+ "activeSoundVolume": 0.4,
+ "destructible" false,
+ "breakable": false,
+ "solid": true,
+ "buildVisibility": hidden
+}
