@@ -17,7 +17,8 @@
   //power
   require("blocks/power/fbutton");
   require("blocks/power/pcircle");
-  require("blocks/power/phollow")
+  require("blocks/power/phollow");
+  require("blocks/power/finish");
   
 //liquids
   require("liquids/propulsion");
