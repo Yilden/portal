@@ -55,6 +55,10 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
     <td>Works like power circle, except it's now shaped like a ring.</td>
     <td>Linear filtering breaks it.</td>
   </tr>
+  <tr>
+    <td>Chamberlock Platform</td>
+    <td>Finishes current game when stepping on it.</td>
+    <td>Still in development.</td>
 </thead>
 </table>
 
@@ -82,6 +86,24 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
     <td>Sentry Deployer</td>
     <td>Deploys sentry unit, can be rotated.</td>
     <td>h</td>
+  </tr>
+</tbody>
+</table>
+
+**Storage**
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Function</th>
+    <th>Note</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Elevator</td>
+    <td>Allows test subject to enter test chambers</td>
+    <td>Still in development.</td>
   </tr>
 </tbody>
 </table>
