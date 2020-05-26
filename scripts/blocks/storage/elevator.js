@@ -30,8 +30,6 @@ const elv = extendContent(CoreBlock, "elevator", {
     
     if(entity.progress <= 1){
       Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
-    }
-   
-		
+  }		
 });
 
