@@ -4,6 +4,10 @@
 
 This is Aperture Science from the Portal series badly designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers. Join the Discord server for ~~extra suffering~~ updates.
 
+### Credits
+
+@sk7725 for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
+
 ### List of Contents
    
 **Environment**
