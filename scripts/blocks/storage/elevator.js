@@ -4,7 +4,7 @@ const elv = extendContent(CoreBlock, "elevator", {
 		
     this.region = Core.atlas.find(this.name);
     this.topRegion = Core.atlas.find(this.name + "-top")
-	},
+  },
   generateIcons(){
     return [
       Core.atlas.find(this.name)	
