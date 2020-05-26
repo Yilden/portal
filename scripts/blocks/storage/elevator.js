@@ -15,9 +15,6 @@ const elv = extendContent(CoreBlock, "elevator", {
       Core.atlas.find(this.name)	
     ]
   },
-  setStats(){
-    //h
-  },
   onUnitRespawn(tile, player){
     if(player == null || tile.entity == null) return;
        entity = tile.ent();
