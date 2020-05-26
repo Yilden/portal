@@ -16,7 +16,7 @@ const fbutton = extendContent(Block, "finish", {
     if(tile.ent().timer.check(timerId, pressTick)) Sounds.place.at(tile.worldx(), tile.worldy());
     tile.ent().timer.reset(timerId, 0);
     
-    Vars.control.onGameOver();
+    Call.onGameOver(Vars.player.getTeam());
   },
   
   update(tile){
