@@ -1,3 +1,8 @@
+const effectA = newEffect(40, e => {
+  Draw.color(Color.valueOf("fafafa"), Color.valueOf("ffffff"), e.fin());
+  Lines.swirl(e.x, e.y, e.fout() * 4, 40)
+});
+
 const elv = extendContent(CoreBlock, "elevator", {
   load(){
     this.super%load; 
@@ -16,7 +21,7 @@ const elv = extendContent(CoreBlock, "elevator", {
   onUnitRespawn(tile, player){
     if(player == null || tile.entity == null) return;
        entity = tile.ent();
-       Effects.effect(Fx.spawn, entity);
+       Effects.effect(effectA, entity);
        entity.progress = 0;
        entity.spawnPlayer = player;
        entity.spawnPlayer.onRespawn(tile);
