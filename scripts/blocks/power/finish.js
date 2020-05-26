@@ -15,6 +15,8 @@ const fbutton = extendContent(Block, "finish", {
   unitOn(tile,unit){
     if(tile.ent().timer.check(timerId, pressTick)) Sounds.place.at(tile.worldx(), tile.worldy());
     tile.ent().timer.reset(timerId, 0);
+    
+    Call.onGameOver();
   },
   
   update(tile){
