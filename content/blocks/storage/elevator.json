@@ -1,7 +1,7 @@
 {
  "name": "Aperture Science Elevator",
  "description": "An elevator, placed in the start of the test chamber and in the chamberlock.",
- "hasItems": false,
+ "hasItems": true,
  "mech": "alpha-mech",
  "targetable": false,
  "activeSoundVolume": 0.4,
@@ -10,5 +10,5 @@
  "solid": true,
  "size": 1,
  "expanded": true,
- "buildVisibility": "sandboxOnly"
+ "buildVisibility": "hidden"
 }
