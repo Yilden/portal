@@ -6,7 +6,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 
 ### Credits
 
-@sk7725 for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
+[**@sk7725**](https://github.com/sk7725) for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
 
 ### List of Contents
    
