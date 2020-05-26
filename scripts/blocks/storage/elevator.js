@@ -15,13 +15,13 @@ const elv = extendContent(CoreBlock, "elevator", {
   },
   onUnitRespawn(tile, player){
     if(player == null || tile.entity == null) return;
-        entity = tile.ent();
-        Effects.effect(Fx.spawn, entity);
-        entity.progress = 0;
-        entity.spawnPlayer = player;
-        entity.spawnPlayer.onRespawn(tile);
-        entity.spawnPlayer.applyImpulse(0, 8);
-        entity.spawnPlayer = null;
+       entity = tile.ent();
+       Effects.effect(Fx.spawn, entity);
+       entity.progress = 0;
+       entity.spawnPlayer = player;
+       entity.spawnPlayer.onRespawn(tile);
+       entity.spawnPlayer.applyImpulse(0, 8);
+       entity.spawnPlayer = null;
   }
   
 		
