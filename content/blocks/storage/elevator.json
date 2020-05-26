@@ -9,5 +9,5 @@
  "breakable": false,
  "solid": true,
  "size": 3,
- "buildVisibility": "hidden"
+ "buildVisibility": "sandboxOnly"
 }
