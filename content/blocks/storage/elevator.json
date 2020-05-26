@@ -8,6 +8,7 @@
  "destructible": false,
  "breakable": false,
  "solid": true,
- "size": 3,
+ "size": 1,
+ "expanded": true,
  "buildVisibility": "sandboxOnly"
 }
