@@ -27,8 +27,14 @@ const elv = extendContent(CoreBlock, "elevator", {
        entity.spawnPlayer.onRespawn(tile);
        entity.spawnPlayer.applyImpulse(0, 8);
        entity.spawnPlayer = null;
-  }
-  
+  },
+  draw(tile){
+    Draw.rect(this.region, tile.drawx(), tile.drawy());
+    
+    if(entity.progress <= 1){
+      Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
+    }
+   
 		
 });
 
