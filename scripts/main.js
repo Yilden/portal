@@ -10,6 +10,9 @@
   
   //producer
   //require("blocks/producer/clauncher");
+
+  //storage
+  require("blocks/storage/elevator");
   
   //power
   require("blocks/power/fbutton");
@@ -26,3 +29,4 @@
   require("units/sentry");
   require("units/storagecube");
   require("units/compcube");
+
