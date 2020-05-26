@@ -8,7 +8,7 @@ const elv = extendContent(CoreBlock, "elevator", {
     this.super%load; 
 		
     this.region = Core.atlas.find(this.name);
-    this.topRegion = Core.atlas.find(this.name + "-top")
+    this.topRegion = Core.atlas.find(this.name + "-top");
   },
   generateIcons(){
     return [
