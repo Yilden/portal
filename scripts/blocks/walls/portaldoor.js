@@ -16,9 +16,9 @@ const door = extendContent(Door, "portal-door", {
   entity = tile.ent();
     
   if(!entity.open){
-   Draw.rect(this.region, tile.drawx(), tile.drawy());
+   Draw.rect(this.region, tile.drawx(), tile.drawy(), e.rotation());
   } else {
-     Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
+     Draw.rect(this.openRegion, tile.drawx(), tile.drawy(), e.rotation());
     }
  },
  
