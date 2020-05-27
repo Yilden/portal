@@ -13,11 +13,10 @@ const door = extendContent(Door, "portal-door", {
  draw(tile){
   entity = tile.ent();
     
+  Draw.rect(this.region, tile.drawx(), tile.drawy());
+  
   if(entity.open){
    Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
-   }
-   else {
-    Draw.rect(this.region, tile.drawx(), tile.drawy());
    }
  },
  update(tile){
