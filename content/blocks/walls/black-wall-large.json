@@ -1,10 +1,10 @@
 {
  "type": "Wall",
- "localizedName": "Large White Wall",
- "description": "A large sized white wall, perfect as being a portal conductor",
+ "localizedName": "Large Black Wall",
+ "description": "A large sized black wall, not useful for being a portal conductor.",
  "destructible": false,
  "targetable": false,
  "size": 2,
  "buildVisibility": "sandboxOnly",
- "category": "effect"
+ "category": "defense"
 }
