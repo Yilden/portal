@@ -14,14 +14,15 @@ const door = extendContent(Door, "portal-door", {
   entity = tile.ent();
     
   if(!entity.open){
-   Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
+   Draw.rect(this.region, tile.drawx(), tile.drawy());
   } else {
      Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
     }
  },
  update(tile){
-  if(tile.entity.power.status > 0){
-   Call.onDoorToggle();
+  var entity = tile.ent();
+  if(entity.open && (!entity.cons.valid())) tile.block().tapped(tile,null);
+  else if((!entity.open) && entity.cons.valid()) tile.block().tapped(tile,null);
   }
  }
 });
