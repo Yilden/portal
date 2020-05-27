@@ -5,6 +5,7 @@
  "sync": true,
  "update": true,
  "rotate": true,
+ "consumesTap": false,
  "destructible": false,
  "targetable": false,
  "buildVisibility": "sandboxOnly",
