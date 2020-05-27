@@ -13,17 +13,15 @@ const door = extendContent(Door, "portal-door", {
  draw(tile){
   entity = tile.ent();
     
-  Draw.rect(this.region, tile.drawx(), tile.drawy());
-  
-  if(entity.open){
+  if(!entity.open){
    Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
-   }
+  } else {
+     Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
+    }
  },
  update(tile){
-  if(tile.entity.cons.valid()){
-   Call.onDoorToggle(tile);
-   
-   tile.entity.cons.trigger();
+  if(tile.entity.power.status > 0){
+   Call.onDoorToggle();
   }
  }
 });
