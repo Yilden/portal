@@ -8,6 +8,10 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
    <img alt="Discord Server" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" width=90 length=120>
 </a>
 
+## How
+
+<p align=justify>Currently, the mod is still in development (and yes I said that too many times). Most of the contents are either <b>hidden</b> or <b>sandboxOnly</b>. You should make a custom map first in the Editor to put the tiles and everything, and then edit in-game or in Sandbox to test contents that this mod have. Feel free to leave suggestions in the Discord server.</p>
+
 ## Credits
 
 [**@sk7725**](https://github.com/sk7725) for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
