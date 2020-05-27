@@ -10,7 +10,6 @@
   "destructible": false,
   "hasPower": true,
   "outputsPower": true,
-  "consumesPower": false,
   "targetable": false,
   "solid": false
 }
