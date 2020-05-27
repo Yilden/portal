@@ -12,5 +12,6 @@
  "buildVisibility": "sandboxOnly",
  "consumes": {
   "power": 6
- }
+ },
+ "category": "defense"
 }
