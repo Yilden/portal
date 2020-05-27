@@ -20,6 +20,9 @@
   require("blocks/power/phollow");
   require("blocks/power/finish");
   
+  //walls
+  require("blocks/walls/portaldoor");
+
 //liquids
   require("liquids/propulsion");
   require("liquids/repulsion");
