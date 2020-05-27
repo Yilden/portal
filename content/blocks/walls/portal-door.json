@@ -1,6 +1,9 @@
 {
  "name": "Aperture Science Door",
  "description": "Door that opens with style, kind of. Requires power to open.",
+ "size": 2,
+ "sync": true,
+ "rotate": true,
  "destructible": false,
  "targetable": false,
  "configurable": false,
