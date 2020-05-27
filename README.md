@@ -134,7 +134,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
   <tr>
     <td>Aperture Science Door.</td>
     <td>Requires power to open the door.</td>
-    <td>Player can still tap it.</td>
+    <td>It works..</td>
   </tr>
 </tbody>
 </table>
