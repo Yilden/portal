@@ -6,4 +6,5 @@
  "targetable": false,
  "size": 2,
  "buildVisibility": "sandboxOnly",
+ "category": "defense"
 }
