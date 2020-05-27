@@ -117,6 +117,24 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 </tbody>
 </table>
 
+**Walls**
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Function</th>
+    <th>Note</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Aperture Science Door.</td>
+    <td>Requires power to open the door.</td>
+    <td>Player can still tap it.</td>
+  </tr>
+</tbody>
+</table>
+
 **Liquids**
 <table>
 <thead>
