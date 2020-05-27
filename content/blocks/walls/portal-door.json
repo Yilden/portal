@@ -1,5 +1,5 @@
 {
- "name": "Aperture Science Door",
+ "localizedName": "Aperture Science Door",
  "description": "Door that opens with style, kind of. Requires power to open.",
  "size": 2,
  "sync": true,
