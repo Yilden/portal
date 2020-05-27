@@ -13,7 +13,7 @@ const door = extendContent(Door, "portal-door", {
  draw(tile){
   entity = tile.ent();
     
-  if(!entity.open){
+  if(entity.open){
    Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
    }
    else {
