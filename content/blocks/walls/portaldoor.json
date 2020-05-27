@@ -3,7 +3,7 @@
  "description": "Door that opens with style, kind of. Requires power to open.",
  "destructible": false,
  "targetable": false,
- "configurable: false,
+ "configurable": false,
  "consumesTap": false,
  "consumes": {
   "power": 6
