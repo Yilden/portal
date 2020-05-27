@@ -4,6 +4,7 @@
  "description": "A large sized black wall, not useful for being a portal conductor.",
  "destructible": false,
  "targetable": false,
+ "breakable": true,
  "size": 2,
  "buildVisibility": "sandboxOnly",
  "category": "defense"
