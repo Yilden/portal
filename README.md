@@ -60,6 +60,11 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
     <td>Linear filtering breaks it.</td>
   </tr>
   <tr>
+    <td>Power Transferer</td>
+    <td>Works like power circle, now it's transparent, perfect for lazy test chamber editing.</td>
+    </td>This works</td>
+  </tr>
+  <tr>
     <td>Chamberlock Platform</td>
     <td>Finishes current game when stepping on it.</td>
     <td>Still in development.</td>
