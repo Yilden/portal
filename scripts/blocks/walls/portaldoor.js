@@ -20,8 +20,10 @@ const door = extendContent(Door, "portal-door", {
    }
  },
  update(tile){
-  if(tile.entity.power.status > 0){
-    Call.onDoorToggle()
+  if(tile.entity.cons.valid()){
+   Call.onDoorToggle(tile);
+   
+   tile.entity.cons.trigger();
   }
  }
 });
