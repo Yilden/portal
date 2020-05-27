@@ -5,7 +5,7 @@
  "sync": true,
  "update": true,
  "rotate": true,
- "configureable": false,
+ "configurable": false,
  "consumesTap": false,
  "destructible": false,
  "targetable": false,
