@@ -5,11 +5,13 @@ const door = extendContent(Door, "portal-door", {
   this.region = Core.atlas.find(this.name);
   this.openRegion = Core.atlas.find(this.name + "-open");
  }, 
+ 
  generateIcons(){
   return [
    Core.atlas.find(this.name)
   ]
  },
+ 
  draw(tile){
   entity = tile.ent();
     
@@ -19,6 +21,7 @@ const door = extendContent(Door, "portal-door", {
      Draw.rect(this.openRegion, tile.drawx(), tile.drawy());
     }
  },
+ 
  update(tile){
   var entity = tile.ent();
   if(entity.open && (!entity.cons.valid())){ 
@@ -28,6 +31,7 @@ const door = extendContent(Door, "portal-door", {
    tile.block().tapped(tile, null);
   }
  },
+ 
  tapped(tile, player){
   if(player != null){
    return;  
