@@ -3,10 +3,11 @@
 <p align=justify>
 This is Aperture Science from the <i>Portal series</i> designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers. Still in development. Join the <b>Discord</b> server for updates.
 </p>
-
+<p align=center>
 <a href="https://discord.gg/RCCVQFW">
-   <img alt="Discord Server" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" width=90 length=120>
+   <img alt="Discord Server" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" width=110 length=140>
 </a>
+</p>
 
 ## How
 
