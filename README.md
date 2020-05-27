@@ -134,7 +134,7 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
   <tr>
     <td>Aperture Science Door</td>
     <td>Requires power to open the door.</td>
-    <td>It works..</td>
+    <td>It works.</td>
   </tr>
 </tbody>
 </table>
@@ -185,12 +185,12 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
   <tr>
     <td>Weighted Companion Cube</td>
     <td>Works like weighted storage cube does. Now it had a heart and it's pink.</td>
-    <td>Might add new sounds and effects.</td>
+    <td>Might add new effects.</td>
   </tr>
   <tr>
     <td>Weighted Storage Cube</td>
     <td>Everybody knows how to use this already.</td>
-    <td>I don't know about this one.</td>
+    <td>This works.</td>
   </tr>
   <tr>
     <td>Sentry Turret</td>
