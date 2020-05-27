@@ -23,5 +23,9 @@ const door = extendContent(Door, "portal-door", {
   var entity = tile.ent();
   if(entity.open && (!entity.cons.valid())) tile.block().tapped(tile, null);
   else if((!entity.open) && entity.cons.valid()) tile.block().tapped(tile, null);
+ },
+ tapped(tile,player){
+  if(player != null) return;  this.super$tapped(tile, player);
  }
+ 
 });
