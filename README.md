@@ -87,7 +87,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
     <td>Might add a new effect.</td>
   </tr>
   <tr>
-    <td>Storage Cube </td>
+    <td>Storage Cube</td>
     <td>Launches storage cube.</td>
     <td>Might also add a new effect.</td>
   </tr>
@@ -128,7 +128,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
 </thead>
 <tbody>
   <tr>
-    <td>Aperture Science Door.</td>
+    <td>Aperture Science Door</td>
     <td>Requires power to open the door.</td>
     <td>Player can still tap it.</td>
   </tr>
@@ -181,7 +181,7 @@ This is Aperture Science from the Portal series badly designed for Mindustry. Fo
   <tr>
     <td>Weighted Companion Cube</td>
     <td>Works like weighted storage cube does. Now it had a heart and it's pink.</td>
-    <td>Might add new sounds and effects</td>
+    <td>Might add new sounds and effects.</td>
   </tr>
   <tr>
     <td>Weighted Storage Cube</td>
