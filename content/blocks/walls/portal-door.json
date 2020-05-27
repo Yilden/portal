@@ -6,7 +6,6 @@
  "rotate": true,
  "destructible": false,
  "targetable": false,
- "consumesTap": false,
  "buildVisibility": "sandboxOnly",
  "consumes": {
   "power": 6
