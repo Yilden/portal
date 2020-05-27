@@ -21,7 +21,7 @@ const door = extendContent(Door, "portal-door", {
  },
  update(tile){
   var entity = tile.ent();
-  if(entity.open && (!entity.cons.valid())) tile.block().tapped(tile,null);
-  else if((!entity.open) && entity.cons.valid()) tile.block().tapped(tile,null);
+  if(entity.open && (!entity.cons.valid())) tile.block().tapped(tile, null);
+  else if((!entity.open) && entity.cons.valid()) tile.block().tapped(tile, null);
  }
 });
