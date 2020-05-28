@@ -1,6 +1,4 @@
  {
-  "name": "Aperture Science Chamberlock Platform",
-  "description": "Finish current test chamber, and maybe move on to the next test chamber.",
   "size": 3,
   "breakable": false,
   "timers": 1,
