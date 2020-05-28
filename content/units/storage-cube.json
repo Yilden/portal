@@ -1,7 +1,5 @@
 {
   "type": "GroundUnit",
-  "localizedName": "Aperture Science Weighted Storage Cube",
-  "description": "An ordinary weighted storage cube that is used to do things, I know right.",
   "weapon": {
     "name": "you have incurred my wrath. prepare to die.",
     "bullet": "lancerLaser"
