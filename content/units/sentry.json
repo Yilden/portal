@@ -1,5 +1,5 @@
 {
-"type": "GroundUnit"
+"type": "GroundUnit",
 "weapon": {
   "name": "sentry-equip",
   "reload": 10,
