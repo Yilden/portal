@@ -16,9 +16,5 @@
   "maxVelocity": 3,
   "itemCapacity": 0,
   "buildPower": 0,
-  "minePower": 0,
-  "weapon": {
-    "name": "you have incurred my wrath. prepare to die.",
-    "bullet": "lancerLaser"
-  }
+  "minePower": 0
 }
