@@ -18,8 +18,11 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
       const health = this.healthf();
     
       Draw.color(Color.valueOf("f5bfe1"), Color.valueOf("000000"), health + Mathf.absin(Time.time(), Math.max(health * 5, 1), 1 - health));
-      Draw.rect(this.getPowerCellRegion());
+      Draw.rect(this.getPowerCellRegion(), this.x, this.y, this.rotation - 90);
       Draw.color();
+      
+      this.drawBackItems(this.item.amount > 0 ? 1 : 0, false);
+      this.drawLight();
     }
   },
   
