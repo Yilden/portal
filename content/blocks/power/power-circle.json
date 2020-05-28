@@ -1,6 +1,4 @@
 {
-  "localizedName": "Power Circle",
-  "description": "Does power stuff, works like cables.",
   "laserRange": 0,
   "maxNodes": 0,
   "outputsPower": true,
