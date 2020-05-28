@@ -13,7 +13,7 @@ wsc.create(prov(() => new JavaAdapter(GroundUnit, {
     return Core.atlas.find(modName + "-storage-cube-cell")
   },
    
-  drawStats(this){
+  drawStats(){
     if(this.drawCell){
       const health = unit.healthf();
     
