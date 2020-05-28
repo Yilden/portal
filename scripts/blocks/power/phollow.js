@@ -23,5 +23,5 @@ const ph = extendContent(PowerNode, "power-hollow", {
       Draw.rect(this.onRegion, tile.drawx(), tile.drawy());
       Draw.color();
     };
-  },
+  }
 });
