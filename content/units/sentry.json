@@ -1,7 +1,5 @@
 {
-"type": "GroundUnit",
-"localizedName": "Aperture Science Sentry Turret",
-"description": "A sentry droid that's designed to shoot test subjects in range.",
+"type": "GroundUnit"
 "weapon": {
   "name": "sentry-equip",
   "reload": 10,
