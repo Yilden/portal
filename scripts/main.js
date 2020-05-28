@@ -12,7 +12,7 @@
   //require("blocks/producer/clauncher");
 
   //storage
-  require("blocks/storage/elevator");
+  //require("blocks/storage/elevator");
   
   //power
   require("blocks/power/fbutton");
