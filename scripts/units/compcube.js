@@ -8,7 +8,11 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
   behavior(){
     /**I didn't realize this exists*/
   },                          
-   
+                          
+  getPowerCellRegion(){
+    return Core.atlas.find(modName + "-companion-cube-cell"
+  },
+                          
   drawStats(){
       this.drawBackItems(this.item.amount > 0 ? 1 : 0, false);
       this.drawLight();
@@ -38,9 +42,7 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
   },
    
   updateTargeting(){
-    if(this.target != null){
-      this.target = null;
-    }
+    if(this.target != null) this.target = null;
   },
     
   update(){
