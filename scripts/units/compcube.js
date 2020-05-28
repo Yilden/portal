@@ -23,7 +23,7 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
     }
   },
   
-  draw(unit){
+  draw(){
     Draw.mixcol(Color.white, this.hitTime / this.hitDuration);
     
     var floor = this.getFloorOn;
