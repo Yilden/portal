@@ -10,7 +10,7 @@ wsc.create(prov(() => new JavaAdapter(GroundUnit, {
   },
   
   getPowerCellRegion(){
-    return Core.atlas.find(modName + "-companion-cube-cell")
+    return Core.atlas.find(modName + "-storage-cube-cell")
   },
     
   drawStats(){
