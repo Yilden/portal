@@ -9,8 +9,6 @@ const conductor = new StatusEffect("conductor");
   conductor.color = bColor;
   
 const conversion = extendContent(Liquid, "conversion-gel", {});
-  conversion.localizedName = "Conversion Gel";
-  conversion.description = 'Liquidífied moon rocks, this liquid is excellent for being a "portal conductor", converts any surface to portal surface.';
   conversion.viscosity = 1.4;
   conversion.flammability = 0;
   conversion.color = aColor;
