@@ -6,7 +6,7 @@ const wsc = extendContent(UnitType, "storage-cube", {
 wsc.weapon = UnitTypes.draug.weapon;
 wsc.create(prov(() => new JavaAdapter(GroundUnit, {
   behavior(){
-  
+    /**I didn't realize this exists*/
   },
                           
   getPowerCellRegion(){
@@ -25,9 +25,23 @@ wsc.create(prov(() => new JavaAdapter(GroundUnit, {
   
   draw(){
     Draw.mixcol(Color.white, this.hitTime / this.hitDuration);
-    floor = this.getFloorOn;
     
-    if(
+    var floor = this.getFloorOn;
+    
+    if(floor.isLiquid){
+      Draw.color(Color.white, floor.color, 0.5);
+    }
+    if(floor.isLiquid){
+      Draw.color(Color.white, floor.color, this.drownTime * 0.4);
+    } else {
+        Draw.color(Color.white);
+    }
+    
+    Draw.rect(this.region, this.x, this.y, this.rotation - 90);
+    Draw.mixcol();
+  },
+  
+  countsAsEnemy(){
+    return false;
   }
-    
 })));
