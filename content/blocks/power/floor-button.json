@@ -1,6 +1,4 @@
  {
-  "name": "Aperture Science Rectangular Heavy Duty Super Button",
-  "description": "Outputs power whenever an object is on it.",
   "size": 3,
   "breakable": true,
   "timers": 1,
