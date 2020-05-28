@@ -23,5 +23,5 @@ const pc = extendContent(PowerNode, "power-circle", {
       Draw.rect(this.onRegion, tile.drawx(), tile.drawy());
       Draw.color();
     };
-  },
+  }
 });
