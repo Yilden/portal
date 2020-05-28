@@ -13,17 +13,17 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
     return Core.atlas.find(modName + "-companion-cube-cell")
   },
    
-  drawStats(){
+  drawStats(unit){
     if(this.drawCell){
       const health = unit.healthf();
     
       Draw.color(Color.valueOf("f5bfe1"), Color.valueOf("000000"), health + Mathf.absin(Time.time(), Math.max(health * 5, 1), 1 - health));
-      Draw.rect(this.getPowerCellRegion());
+      Draw.rect(unit.getPowerCellRegion());
       Draw.color();
     }
   },
   
-  draw(){
+  draw(unit){
     Draw.mixcol(Color.white, this.hitTime / this.hitDuration);
     
     var floor = this.getFloorOn;
