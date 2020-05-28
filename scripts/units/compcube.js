@@ -13,7 +13,7 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
     return Core.atlas.find(modName + "-companion-cube-cell")
   },
    
-  drawStats(){
+  drawStats(unit){
     if(this.drawCell){
       const health = unit.healthf();
     
