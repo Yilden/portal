@@ -1,7 +1,5 @@
 {
   "type": "UnitFactory",
-  "name": "Companion Cube Launcher",
-  "description": "Outputs a single weighted companion cube when activated.",
   "produceTime": 10,
   "launchVelocity": 0.4,
   "size": 2,
