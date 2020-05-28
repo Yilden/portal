@@ -1,6 +1,6 @@
 const effectA = newEffect(40, e => {
   Draw.color(Color.valueOf("fafafa"), Color.valueOf("ffffff"), e.fin());
-  Lines.swirl(e.x, e.y, e.fout() * 4, 40)
+  Lines.swirl(e.x, e.y, e.fout() * 4, 40);
 });
 
 const elv = extendContent(CoreBlock, "elevator", {
