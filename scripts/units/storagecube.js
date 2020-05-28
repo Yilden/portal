@@ -13,12 +13,12 @@ wsc.create(prov(() => new JavaAdapter(GroundUnit, {
     return Core.atlas.find(modName + "-storage-cube-cell")
   },
    
-  drawStats(unit){
+  drawStats(this){
     if(this.drawCell){
       const health = unit.healthf();
     
       Draw.color(Color.valueOf("f5bfe1"), Color.valueOf("000000"), health + Mathf.absin(Time.time(), Math.max(health * 5, 1), 1 - health));
-      Draw.rect(unit.getPowerCellRegion());
+      Draw.rect(this.getPowerCellRegion());
       Draw.color();
     }
   },
