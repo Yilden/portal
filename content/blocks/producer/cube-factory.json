@@ -1,7 +1,5 @@
 {
   "type": "UnitFactory",
-  "name": "Storage Cube Launcher",
-  "description": "Outputs a single weighted storage cube when activated.",
   "produceTime": 10,
   "launchVelocity": 0.4,
   "size": 2,
