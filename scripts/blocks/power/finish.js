@@ -27,7 +27,7 @@ const fbutton = extendContent(Block, "finish", {
   },
   
   getPowerProduction(tile){
-  return (tile.ent().timer.check(timerId,pressTick)) ? 0: 6;
+  return (tile.ent().timer.check(timerId, pressTick)) ? 0: 6;
   }
 });
 
