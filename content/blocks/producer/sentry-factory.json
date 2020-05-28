@@ -1,7 +1,5 @@
 {
   "type": "UnitFactory",
-  "localizedName": "Sentry Deployer",
-  "description": "Deploys sentry unit that stands still.",
   "produceTime": 1,
   "launchVelocity": 0,
   "size": 2,
