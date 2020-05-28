@@ -9,8 +9,6 @@ const hop = new StatusEffect("hop");
   hop.color = bColor;
   
 const repulsion = extendContent(Liquid, "repulsion-gel", {});
-  repulsion.localizedName = "Repulsion Gel";
-  repulsion.description = "This liquid is blue, gíves you high knockback to jump from place to place.";
   repulsion.viscosity = 1.4;
   repulsion.flammability = 0;
   repulsion.color = aColor;
