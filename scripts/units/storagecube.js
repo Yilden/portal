@@ -1,4 +1,3 @@
-
 const wsc = new JavaAdapter(UnitType, {}, "storage-cube",  prov(() => new JavaAdapter(GroundUnit, {
 	getPowerCellRegion(){
         return Core.atlas.find(modName + "-storage-cube-cell");
