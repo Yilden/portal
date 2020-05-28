@@ -1,7 +1,5 @@
 {
   "type": "PowerNode",
-  "localizedName": "Power Transferer",
-  "description": "Invinsible power transferer.",
   "laserRange": 0,
   "maxNodes": 0,
   "outputsPower": true,
