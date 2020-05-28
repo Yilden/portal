@@ -190,17 +190,17 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
   <tr>
     <td>Weighted Companion Cube</td>
     <td>Works like weighted storage cube does. Now it had a heart and it's pink.</td>
-    <td>Might add new effects.</td>
+    <td>#3</td>
   </tr>
   <tr>
     <td>Weighted Storage Cube</td>
     <td>Everybody knows how to use this already.</td>
-    <td>This works.</td>
+    <td>#3</td>
   </tr>
   <tr>
     <td>Sentry Turret</td>
     <td>Sentry unit that can't rotate and move. Shoots target with 36 bullets per second.</td>
-    <td>Still in development. You can test it, though.</td>
+    <td>#3</td>
   </tr>
 </tbody>
 </table>
