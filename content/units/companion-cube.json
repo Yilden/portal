@@ -1,7 +1,5 @@
 {
   "type": "GroundUnit",
-  "localizedName": "Aperture Science Weighted Companion Cube",
-  "description": "An ordinary weighted storage cube that is used to do things, I know right. It has a heart and now it's pink.",
   "weapon": {
     "name": "you have incurred my wrath. prepare to die.",
     "bullet": "lancerLaser"
