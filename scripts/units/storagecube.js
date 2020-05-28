@@ -28,7 +28,7 @@ wsc.create(prov(() => new JavaAdapter(GroundUnit, {
         Draw.color(Color.white);
     }
     
-    Draw.rect(this.region, this.x, this.y, this.rotation - 90);
+    Draw.rect(this.type.region, this.x, this.y, this.rotation - 90);
     Draw.mixcol();
   },
   
