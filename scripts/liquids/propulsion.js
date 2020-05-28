@@ -9,8 +9,6 @@ const speed = new StatusEffect("speed");
   speed.color = bColor;
   
 const propulsion = extendContent(Liquid, "propulsion-gel", {});
-  propulsion.localizedName = "Propulsion Gel";
-  propulsion.description = "This liquid is orange, gives you speed boost so that you can run away from your problems faster than ever!";
   propulsion.viscosity = 1.4;
   propulsion.flammability = 0;
   propulsion.color = aColor;
