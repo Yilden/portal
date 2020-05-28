@@ -5,7 +5,7 @@
   "weapon": {
     "name": "you have incurred my wrath. prepare to die.",
     "bullet": "lancerLaser"
-  }
+  },
   "health": 10,
   "hitsize": 7,
   "speed": 0,
