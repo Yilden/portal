@@ -1,7 +1,5 @@
 {
  "type": "Wall",
- "localizedName": "Large White Wall",
- "description": "A large sized white wall, perfect as being a portal conductor.",
  "destructible": false,
  "targetable": false,
  "breakable": true,
