@@ -1,50 +1,39 @@
-const wcc = extendContent(UnitType, "companion-cube", {
-  load(){
-    this.region = Core.atlas.find(this.name);
+const gone = newEffect(5, e => {
+  Draw.color(Color.valueOf("f0f0f0"), Color.valueOf("f5bfe1"), e.fin());
+  Lines.stroke(e.fout() * 3);
+  Lines.square(e.x, e.y, 15);
 });
 
-wcc.weapon = UnitTypes.draug.weapon;
-wcc.create(prov(() => new JavaAdapter(GroundUnit, {
+var t = this;
+t.global.compcubea = 100;
+const white = Color.valueOf("ffffff");
+
+const compcube = extendContent(UnitType, "companion-cube", {
+  load(){
+    //this.super$load();
+    this.region = Core.atlas.find(this.name);
+  }
+});
+compcube.weapon = UnitTypes.draug.weapon;
+compcube.create(prov(() => new JavaAdapter(GroundUnit, {
   behavior(){
-    /**I didn't realize this exists*/
-  },                          
-                          
-  getPowerCellRegion(){
-    return Core.atlas.find(modName + "-companion-cube-cell"
-  },
-                          
-  drawStats(){
-      this.drawBackItems(this.item.amount > 0 ? 1 : 0, false);
-      this.drawLight();
-    }
+    //just..stands
   },
   
-  draw(){
-    Draw.mixcol(Color.white, this.hitTime / this.hitDuration);
-    
-    var floor = this.getFloorOn;
-    
-    if(floor.isLiquid){
-      Draw.color(Color.white, floor.color, 0.5);
-    }
-    if(floor.isLiquid){
-      Draw.color(Color.white, floor.color, this.drownTime * 0.4);
-    } else {
-        Draw.color(Color.white);
-    }
-    
-    Draw.rect(this.type.region, this.x, this.y, this.rotation - 90);
-    Draw.mixcol();
-  },
-  
-  countsAsEnemy(){
-    return false;
-  },
-   
   updateTargeting(){
-    if(this.target != null) this.target = null;
+    if(this.target!=null) this.target=null;
   },
+  
+  onDeath(){
+    Effects.effect(gone, this);
+    Effects.shake(2, 2, this);
     
+    Sounds.bang.at(this);
+    this.item.amount = 0;
+    this.drownTime = 0;
+    Events.fire(EventType.UnitDestroyEvent(this));
+  },
+  
   update(){
     //this.super$update();
     //BaseUnit
@@ -53,25 +42,31 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
       this.remove();
       return;
     }
+    
     this.hitTime -= Time.delta();
     if(Vars.net.client()){
       this.interpolate();
       this.status.update(this);
       return;
     }
+    
     if(!this.isFlying() && (Vars.world.tileWorld(this.x, this.y) != null && !(Vars.world.tileWorld(this.x,this.y).block() instanceof BuildBlock) && Vars.world.tileWorld(this.x, this.y).solid())){
       //when it is stuck in a WALL
       //this.kill();
     }
+    
     this.avoidOthers();
-    if(this.spawner != this.noSpawner && (Vars.world.tile(this.spawner) == null || !(Vars.world.tile(this.spawner).entity instanceof UnitFactoryEntity))){
+    if(this.spawner != this.noSpawner && (Vars.world.tile(this.spawner) == null)){
       //when its factory is in a COFFIN
       this.kill();
     }
+    
     this.updateTargeting();
     //this.state.update(); //braindead
+    
     this.updateVelocityStatus();
     //if(this.target != null) this.behavior();
+    
     if(!this.isFlying()){
       this.clampPosition();
     }
@@ -84,5 +79,37 @@ wcc.create(prov(() => new JavaAdapter(GroundUnit, {
     if(this.stuckTime < 1.0){
       this.walkTime += Time.delta();
     }
+  },
+  
+  countsAsEnemy(){
+    return false;
+  },
+  
+  drawStats(){
+    if(t.global.compcubea > 0){
+      this.drawBackItems(this.item.amount > 0 ? 1 : 0, false);
+      this.drawLight();
+    }
+    
+  },
+  
+  draw(){
+    Draw.mixcol(white.a(t.global.compcubea / 100), this.hitTime / this.hitDuration);
+
+    var floor = this.getFloorOn();
+    if(floor.isLiquid){
+      Draw.color(white.a(t.global.compcubea / 100), floor.color.a(t.global.compcubea / 100), 0.5);
+    }
+    if(floor.isLiquid){
+      Draw.color(white.a(t.global.compcubea / 100), floor.color.a(t.global.compcubea / 100), this.drownTime * 0.4);
+    }else{
+      Draw.color(white.a(t.global.compcubea / 100));
+    }
+
+    Draw.rect(this.type.region, this.x, this.y, this.rotation - 90);
+
+    Draw.mixcol();
   }
 })));
+
+this.global.compcube = compcube;
