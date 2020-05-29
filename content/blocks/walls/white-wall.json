@@ -1,0 +1,9 @@
+{
+ "type": "Wall",
+ "destructible": false,
+ "targetable": false,
+ "breakable": true,
+ "size": 1,
+ "buildVisibility": "sandboxOnly",
+ "category": "defense"
+}
