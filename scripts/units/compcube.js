@@ -1,7 +1,7 @@
-const gone = newEffect(5, e => {
+const gone = newEffect(0, e => {
   Draw.color(Color.valueOf("f0f0f0"), Color.valueOf("f5bfe1"), e.fin());
-  Lines.stroke(e.fout() * 3);
-  Lines.square(e.x, e.y, 15);
+  Lines.stroke(e.fout() * 5);
+  Lines.square(e.x, e.y, 20);
 });
 
 var t = this;
