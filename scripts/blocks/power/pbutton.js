@@ -1,18 +1,18 @@
 const pressTick = 6;
 const timerId = 0;
 const button = extendContent(Block, "pedestal", {
-  placed(tile) {
+  placed(tile){
     this.super$placed(tile);
     tile.ent().timer.reset(timerId, pressTick + 1);
   },
   
-  draw(tile) {
-    Draw.rect(Core.atlas.find(this.name + ((tile.ent().timer.check(timerId, pressTick)) ? "":"-on")), tile.drawx(), tile.drawy());
+  draw(tile){
+    Draw.rect(Core.atlas.find(this.name + ((tile.ent().timer.check(timerId, pressTick)) ? "" : "-on")), tile.drawx(), tile.drawy());
   },
   
   tapped(tile, player){
-    tile.ent().timer.reset(timerId,0);
-    Sounds.click.at(tile.worldx(),tile.worldy());
+    tile.ent().timer.reset(timerId, 0);
+    Sounds.click.at(tile.worldx(), tile.worldy());
   },
   
   getPowerProduction(tile){
