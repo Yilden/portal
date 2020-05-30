@@ -11,7 +11,7 @@
   ],
   "sync": true,
   "expanded": true,
-  "health": 1200,
+  "destructible": false,
   "hasPower": true,
   "outputsPower": true,
   "consumesPower": false,
