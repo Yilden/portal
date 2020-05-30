@@ -15,7 +15,7 @@
   "hasPower": true,
   "outputsPower": true,
   "consumesPower": false,
-  "comsumesTap": true,
+  "comsumesTap": false,
   "targetable": false,
   "buildVisibility": "sandboxOnly",
   "solid": true
