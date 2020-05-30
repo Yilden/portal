@@ -17,6 +17,53 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
 
 [**@sk7725**](https://github.com/sk7725) for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
 
+## Content List
+
+```
+Blocks
+
+• Environment
+  > Black Tile
+  > White Tile
+  > Squared Tile
+  
+• Power
+  > Chamberlock Platform
+  > Pedestal Button
+  > Rectangular Heavy Duty Super Button
+  > Power Circle
+  > Power Hollow
+  > Power Transparent
+  
+• Producer
+  > Storage Cube Launcher
+  > Companion Cube Launcher
+  > Sentry Deployer
+  
+• Storage
+  > Elevator
+  
+• Walls
+  > Black Wall
+  > Large Black Wall
+  > White Wall
+  > Large White Wall
+  > Doorway
+  
+Units
+
+• Ground Unit
+  > Weighted Storage Cube
+  > Weighted Companion Cube
+  > Sentry Turret
+  
+Items
+
+• Liquids
+  > Repulsion Gel
+  > Propulsion Gel
+  > Conversion Gel
+````
 
 
 
