@@ -16,6 +16,7 @@
   
   //power
   require("blocks/power/fbutton");
+  require("blocks/power/pbutton");
   require("blocks/power/pcircle");
   require("blocks/power/phollow");
   require("blocks/power/finish");
