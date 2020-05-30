@@ -5,18 +5,16 @@ const button = extendContent(Block, "pedestal", {
     this.super$placed(tile);
     tile.ent().timer.reset(timerId, pressTick + 1);
   },
+  
   draw(tile) {
     Draw.rect(Core.atlas.find(this.name + ((tile.ent().timer.check(timerId, pressTick)) ? "":"-on")), tile.drawx(), tile.drawy());
   },
+  
   tapped(tile, player){
     tile.ent().timer.reset(timerId,0);
     Sounds.click.at(tile.worldx(),tile.worldy());
   },
-/*
-  update(tile){
-    if(tile.ent().timer.getTime(timerId) == pressTick) Sounds.click.at(tile.worldx(),tile.worldy(), 0.8);
-  }
-*/
+  
   getPowerProduction(tile){
   return (tile.ent().timer.check(timerId, pressTick)) ? 0: 6;
   }
