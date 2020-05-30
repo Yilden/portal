@@ -24,45 +24,73 @@ Blocks
 
 • Environment
   > Black Tile
+    A non-portal conductor surface.
   > White Tile
+    A portal conductor surface.
   > Squared Tile
+    A portal conductor surface.
+  
+  Note: These tiles may cause glitches when you remove a block that has 2x2 or more size.
   
 • Power
   > Chamberlock Platform
+    End current game, or test chamber.
   > Pedestal Button
+    Outputs power for a while when pressed.
   > Rectangular Heavy Duty Super Button
+    Outputs power for as long as there's something above or om it.
   > Power Circle
+    Transfers power to another power transferer or block that is next to it. Turns to yellow when power status is true.
   > Power Hollow
+    Same with power circle, except it's now shaped like a ring. Usually placed in corners.
   > Power Transparent
+    Same with the other power transferers, now it's transparent. Used when transferring power to an even number sized block.
   
 • Producer
   > Storage Cube Launcher
+    Block that launches weighted storage cube. Requires power to activate.
   > Companion Cube Launcher
+    Block that launches weighted companion cube. Requires power to activate.
   > Sentry Deployer
+    Deploys sentry turret unit.
   
 • Storage
   > Elevator
+    Allows test subjects to enter a test chamber. Works like a core in the normal game.
   
 • Walls
   > Black Wall
+    A non-portal conductor wall.
   > Large Black Wall
+    A large version of the non-portal conductor wall.
   > White Wall
+    A portal conductor wall.
   > Large White Wall
+    A large version of the portal conductor wall.
   > Doorway
+    Allows test subjects to travel between rooms in a test chamber. Requires power to open.
   
 Units
 
 • Ground Unit
   > Weighted Storage Cube
+    A cube that can be moved around to accomplish stuff in a test chamber.
   > Weighted Companion Cube
+    A modified version of the weighted storage cube. It has a pink heart this time.
   > Sentry Turret
+    A sentry turret unit that shoots at test subject in it's prespective. It can't rotate or move. Note: Only use for the opposite team of the test subject, and it's not meant to be pushed around.
   
 Items
 
 • Liquids
   > Repulsion Gel
+    A blue gel with an unknown use since jump boost doesn't make sense in this game mechanics.
   > Propulsion Gel
+    An orange gel that gives speed boost to anything that's on it.
   > Conversion Gel
+    Liquidified moon rocks that can turn your non-portal conductor surface to a portal conductor surface!
+    
+    Note: These liquids are still in development, and portals are not here yet..
 ````
 
 
