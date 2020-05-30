@@ -12,5 +12,6 @@
   "consumesPower": false,
   "comsumesTap": true,
   "targetable": false,
+  "buildVisibility": "sandboxOnly",
   "solid": true
 }
