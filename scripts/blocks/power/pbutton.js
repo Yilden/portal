@@ -1,5 +1,6 @@
 const pressTick = 65;
 const timerId = 0;
+const blockSize = Vars.tilesize;
 const button = extendContent(Block, "pedestal", {
   placed(tile){
     this.super$placed(tile);
