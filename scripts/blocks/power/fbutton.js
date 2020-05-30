@@ -12,7 +12,7 @@ const fbutton = extendContent(Block, "floor-button", {
     Draw.rect(Core.atlas.find(this.name + ((tile.ent().timer.check(timerId, pressTick)) ? "":"-b")), tile.drawx(), tile.drawy());
   },
   
-  unitOn(tile,unit){
+  unitOn(tile, unit){
     if(tile.ent().timer.check(timerId, pressTick)) Sounds.place.at(tile.worldx(), tile.worldy());
     tile.ent().timer.reset(timerId, 0);
     
