@@ -92,7 +92,7 @@ Items
   > Conversion Gel
     Liquidified moon rocks that can turn your non-portal conductor surface to a portal conductor surface!
     
-    Note: These liquids are still in development, and portals are not here yet..
+    *Note: These liquids are still in development, and portals are not here yet..
 ````
 
 
