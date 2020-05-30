@@ -11,8 +11,16 @@ const button = extendContent(Block, "pedestal", {
   },
   
   unitOn(tile, unit){
+    if(tile.ent().timer.check(timerId, pressTick)) Sounds.click.at(tile.worldx(), tile.worldy());
     tile.ent().timer.reset(timerId, 0);
-    Sounds.click.at(tile.worldx(), tile.worldy());
+    
+  },
+  
+  update(tile){
+    this.super$update(tile);
+    Units.nearby(tile.worldx(), tile.worldy(), blockSize, blockSize, cons(e => {
+      this.unitOn(tile, e);
+    }));
   },
   
   getPowerProduction(tile){
