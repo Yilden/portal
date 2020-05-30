@@ -15,6 +15,7 @@
   "hasPower": true,
   "outputsPower": true,
   "consumesPower": false,
+  "buildVisibility": "sandboxOnly",
   "targetable": false,
   "solid": false
 }
