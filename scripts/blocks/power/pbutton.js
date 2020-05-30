@@ -10,7 +10,7 @@ const button = extendContent(Block, "pedestal", {
     Draw.rect(Core.atlas.find(this.name + ((tile.ent().timer.check(timerId, pressTick)) ? "" : "-on")), tile.drawx(), tile.drawy());
   },
   
-  tapped(tile, player){
+  unitOn(tile, unit){
     tile.ent().timer.reset(timerId, 0);
     Sounds.click.at(tile.worldx(), tile.worldy());
   },
