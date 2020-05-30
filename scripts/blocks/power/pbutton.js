@@ -1,4 +1,4 @@
-const pressTick = 65;
+const pressTick = 30;
 const timerId = 0;
 const blockSize = Vars.tilesize;
 const button = extendContent(Block, "pedestal", {
