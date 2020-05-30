@@ -1,4 +1,4 @@
-<p align=center> <img alt="Icon" src="sprites-override/ui/logo.png"> </p>
+<p align=center> <img alt="Icon" src="https://github.com/Gdeft/aperture-science/blob/master/sprites-override/ui/logo.png"> </p>
 
 <p align=justify>
 This is Aperture Science from the <i>Portal series</i> designed for Mindustry. Focusing on the adding of test chambers as separate maps that can be played in campaign and also community test chambers. Still in development. Join the <b>Discord</b> server for updates.
