@@ -36,9 +36,9 @@ Blocks
   > Chamberlock Platform
     End current game, or test chamber.
   > Pedestal Button
-    Outputs power for a while when pressed.
+    Outputs power for a while when something is on top of it.
   > Rectangular Heavy Duty Super Button
-    Outputs power for as long as there's something above or om it.
+    Outputs power for as long as there's something above or on it.
   > Power Circle
     Transfers power to another power transferer or block that is next to it. Turns to yellow when power status is true.
   > Power Hollow
