@@ -30,7 +30,7 @@ Blocks
   > Squared Tile
     A portal conductor surface.
   
-  Note: These tiles may cause glitches when you remove a block that has 2x2 or more size.
+  *Note: These tiles may cause glitches when you remove a block that has 2x2 or more size.
   
 • Power
   > Chamberlock Platform
@@ -78,7 +78,9 @@ Units
   > Weighted Companion Cube
     A modified version of the weighted storage cube. It has a pink heart this time.
   > Sentry Turret
-    A sentry turret unit that shoots at test subject in it's prespective. It can't rotate or move. Note: Only use for the opposite team of the test subject, and it's not meant to be pushed around.
+    A sentry turret unit that shoots at test subject in it's prespective. It can't rotate or move. 
+    
+    *Note: For sentry, only use in the opposite team of the test subject, and it's not meant to be pushed around.
   
 Items
 
