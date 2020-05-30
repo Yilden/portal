@@ -1,4 +1,4 @@
-const pressTick = 6;
+const pressTick = 65;
 const timerId = 0;
 const button = extendContent(Block, "pedestal", {
   placed(tile){
