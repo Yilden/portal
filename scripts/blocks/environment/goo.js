@@ -1,5 +1,5 @@
 const electric = newEffect(30, e => {
-  e.scaled(7, i -> {
+  e.scaled(7, i => {
     Lines.stroke(3 * i.fout());
     Lines.circle(e.x, e.y, 3 + i.fin() * 10);
   });
