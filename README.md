@@ -6,6 +6,12 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
 <p align=left>
 <a href="https://discord.gg/RCCVQFW">
    <img alt="Discord Server" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" width=110 length=140>
+</a> 
+</p>
+
+<p>   
+<a href="https://github.com/Gdeft/aperture-science">
+   <img alt="GitHub Repository" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/GitHub_logo_2013_padded.svg/1240px-GitHub_logo_2013_padded.svg.png" width=110 length=140>
 </a>
 </p>
 
