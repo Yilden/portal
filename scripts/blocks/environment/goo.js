@@ -34,6 +34,18 @@ const electric = newEffect(30, e => {
   Angles.randLenVectors(e.id + 1, 8, 1 + 23 * e.finpow(), (x, y), hhh);
 });
 
-const goo = extendContent(Floor, "goo", {});
+const goo = extendContent(Floor, "goo", {
+  load(){
+    this.super$load();
+    
+    this.region = Core.atlas.find(this.name);
+  },
+  
+  draw(tile){
+    Mathf.random.setSeed(tile.pos());
+    
+    Draw.rect(this.region, tile.worldx(), tile.worldy();
+  }
+});
 
 goo.drownUpdateEffect = electric;
