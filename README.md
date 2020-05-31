@@ -29,8 +29,11 @@ Blocks
     A portal conductor surface.
   > Squared Tile
     A portal conductor surface.
+  > Acid
+    Also known as the goo, hazard liquid, or toxic water. Providing penalty for your failure.
+   
   
-  *Note: These tiles may cause glitches when you remove a block that has 2x2 or more size.
+  *Note: The tiles edge are still there, I'm currently trying to figure out the most efficient way possible to remove it.
   
 • Power
   > Chamberlock Platform
