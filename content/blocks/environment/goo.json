@@ -1,9 +1,12 @@
 {
   "type": "Floor",
+  "dragMultiplier": 0.2,
   "speedMultiplier": 0.1,
   "variants": 0,
-  "status": "tarred",
+  "status": "shocked",
+  "statusDuration": 50,
+  "drownUpdateEffect": "lightningShoot",
   "isLiquid": true,
   "drownTime": 120,
-  "cacheLayer": "tar"
+  "cacheLayer": "water"
 }
