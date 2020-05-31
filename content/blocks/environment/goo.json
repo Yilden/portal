@@ -1,4 +1,6 @@
 {
+  "type": "Floor",
+  "drownUpdateEffect": "lightningShoot"
   "speedMultiplier": 0.1,
   "variants": 0,
   "isLiquid": true,
