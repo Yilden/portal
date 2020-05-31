@@ -5,5 +5,5 @@
   "status": "tarred",
   "isLiquid": true,
   "drownTime": 120,
-  "cacheLayer": "water"
+  "cacheLayer": "tar"
 }
