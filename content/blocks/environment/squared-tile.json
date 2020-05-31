@@ -1,5 +1,5 @@
 {
   "type": "Floor",
   "variants": 0,
-  "edge": "transparent"
+  "edge": "squared-tile-edge"
 }
