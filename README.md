@@ -5,7 +5,7 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
 </p>
 <p align=left>
 <a href="https://discord.gg/RCCVQFW">
-   <img alt="Discord Server" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" width=110 length=140>
+   <img alt="Discord Server" src="https://discord.com/assets/9babbea9acbfec5302d832bae6c3c184.svg" width=110 length=140>
 </a> 
 </p>
 
