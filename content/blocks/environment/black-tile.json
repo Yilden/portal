@@ -1,4 +1,5 @@
 {
+  "type": "Floor",
   "variants": 0,
-  "placeableOn": true
+  "edge": "transparent"
 }
