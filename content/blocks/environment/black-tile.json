@@ -1,5 +1,4 @@
 {
   "variants": 0,
-  "placeableOn": true,
-  "layer": "block"
+  "placeableOn": true
 }
