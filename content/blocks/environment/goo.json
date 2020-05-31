@@ -2,7 +2,8 @@
   "type": "Floor",
   "speedMultiplier": 0.1,
   "variants": 0,
+  "status": "oily",
   "isLiquid": true,
-  "drownTime": 20,
+  "drownTime": 120,
   "cacheLayer": "water"
 }
