@@ -2,7 +2,7 @@
   "name": "aperture-science",
   "displayName": "[#ff7912]Aperture [#1fa5ff]Science[]",
   "author": "Gdeft",
-  "description": "Simulates the world of Aperture Science Enrichment Center on Mindustry. [accent]Still in development.[]\nCheck [#fafafa]README.md[] or [#7289da]Discord[] to see updates.\n\n[red]h[]",
+  "description": "Simulates the world of [#1fa5ff]Aperture Science Enrichment Center[] in Mindustry.\n[accent]Still in development.[]\n\nCheck [#4078c0]README.md[] on [#f5f5f5]GitHub[] or [#7289da]Discord[] to see updates.\n\n[accent]Credits:[] sk7725",
   "minGameVersion": "104.6",
   "version": "0.3 dev"
 }
