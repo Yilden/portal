@@ -1,9 +1,9 @@
 //blocks
 
   //environment
-  require("blocks/environment/blacktile");
-  require("blocks/environment/whitetile");
-  require("blocks/environment/squaredtile");
+  //require("blocks/environment/blacktile");
+  //require("blocks/environment/whitetile");
+  //require("blocks/environment/squaredtile");
   //require("blocks/environment/goo");
   
   //production
