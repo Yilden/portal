@@ -4,8 +4,6 @@ const electric = newEffect(30, e => {
     Lines.circle(e.x, e.y, 3 + i.fin() * 10);
   });
 
-  Draw.color(Color.valueOf("#F7F7F7");
-
   /* Java version
   Angles.randLenVectors(e.id, 6, 2 + 19 * e.finpow(), (x, y) => {
     Fill.circle(e.x + x, e.y + y, e.fout() * 3 + 0.5);
@@ -14,13 +12,11 @@ const electric = newEffect(30, e => {
   */
              
   const hh = new Floatc2({get: function(x, y){
+    Draw.color(Color.valueOf("#F7F7F7");
     Fill.circle(e.x + x, e.y + y, e.fout() * 3 + 0.5);
     Fill.circle(e.x + x / 2, e.y + y / 2, e.fout() * 1);
   }});
   Angles.randLenVectors(e.id, 6, 2 + 19, * e.finpow(), (x, y), hh);
-
-  Draw.color(Color.valueOf("#D4F2FB"), Color.valueOf("#A8E6F9"), Color.valueOf("#F7F7F7"), e.fin());
-  Lines.stroke(1.5 * e.fout());
 
   /* Java Version
   Angles.randLenVectors(e.id + 1, 8, 1 + 23 * e.finpow(), (x, y) => {
@@ -29,6 +25,8 @@ const electric = newEffect(30, e => {
   */
 
   const hhh = new Floatc2({get: function(x, y){
+    Draw.color(Color.valueOf("#D4F2FB"), Color.valueOf("#A8E6F9"), Color.valueOf("#F7F7F7"), e.fin());
+    Lines.stroke(1.5 * e.fout());
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), 1 + e.fout() * 3);
   }});
   Angles.randLenVectors(e.id + 1, 8, 1 + 23 * e.finpow(), (x, y), hhh);
