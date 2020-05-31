@@ -1,9 +1,4 @@
 const electric = newEffect(30, e => {
-  e.scaled(7, i => {
-    Lines.stroke(3 * i.fout());
-    Lines.circle(e.x, e.y, 3 + i.fin() * 10);
-  });
-
   /* Java version
   Angles.randLenVectors(e.id, 6, 2 + 19 * e.finpow(), (x, y) => {
     Fill.circle(e.x + x, e.y + y, e.fout() * 3 + 0.5);
@@ -16,7 +11,7 @@ const electric = newEffect(30, e => {
     Fill.circle(e.x + x, e.y + y, e.fout() * 3 + 0.5);
     Fill.circle(e.x + x / 2, e.y + y / 2, e.fout() * 1);
   }});
-  Angles.randLenVectors(e.id, 6, 2 + 19, * e.finpow(), (x, y), hh);
+  Angles.randLenVectors(e.id, 6, 2 + 19, * e.finpow(), 30, hh);
 
   /* Java Version
   Angles.randLenVectors(e.id + 1, 8, 1 + 23 * e.finpow(), (x, y) => {
@@ -29,7 +24,7 @@ const electric = newEffect(30, e => {
     Lines.stroke(1.5 * e.fout());
     Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), 1 + e.fout() * 3);
   }});
-  Angles.randLenVectors(e.id + 1, 8, 1 + 23 * e.finpow(), (x, y), hhh);
+  Angles.randLenVectors(e.id + 1, 8, 1 + 23 * e.finpow(), 30, hhh);
 });
 
 const goo = extendContent(Floor, "goo", {
