@@ -22,3 +22,4 @@ const electric = newEffect(30, e => {
 const goo = extendContent(Floor, "goo", {});
 
 goo.drownUpdateEffect = electric;
+h
