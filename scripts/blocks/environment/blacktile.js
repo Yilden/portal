@@ -10,6 +10,6 @@ const inferior = extendContent(Floor, "black-tile", {
   },
   
   draw(tile){
-    Draw.rect(this.region, tile.worldx(), tile.worldy());
+    Draw.rect(this.region, tile.drawx(), tile.drawy());
   }
 });
