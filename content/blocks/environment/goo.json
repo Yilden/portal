@@ -8,6 +8,5 @@
   "isLiquid": true,
   "drownTime": 40,
   "cacheLayer": "water",
-  "hasShadow": false,
   "drownUpdateEffect": "lightningShoot"
 }
