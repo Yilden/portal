@@ -39,7 +39,7 @@ Blocks
     Also known as the goo, hazard liquid, or toxic water. Providing penalty for your failure.
    
   
-  *Note: The tiles edge are still there, I'm currently trying to figure out the most efficient way possible to remove it.
+  *Note: The tile edges are still there, I'm currently trying to figure out the most efficient way possible to remove it.
   
 • Power
   > Chamberlock Platform
