@@ -1,10 +1,11 @@
 {
+  "type": "Floor",
   "dragMultiplier": 0.2,
   "speedMultiplier": 0,
   "variants": 0,
-  "status": "shocked",
-  "statusDuration": 50,
+  "status": "electric",
+  "statusDuration": 90,
   "isLiquid": true,
-  "drownTime": 50,
+  "drownTime": 90,
   "cacheLayer": "water"
 }
