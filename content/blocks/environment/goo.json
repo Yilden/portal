@@ -3,7 +3,7 @@
   "dragMultiplier": 0.2,
   "speedMultiplier": 0,
   "variants": 0,
-  "status": "electric",
+  "status": "shocked",
   "statusDuration": 90,
   "isLiquid": true,
   "drownTime": 90,
