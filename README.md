@@ -27,6 +27,8 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
 
 ## Content List
 
+<p align=justify>Here is the list containing all of the contents this mod has including their functionallity. You can slide it, by the way.</p>
+
 ```
 Blocks
 
