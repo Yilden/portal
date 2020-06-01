@@ -17,6 +17,8 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
 
 ## Note
 
+<p align=justify>This mod's (spriting) style won't work well with others because it doesn't. N</p>
+
 <p align=justify>Currently, the mod is still in development (and yes, I said that too many times). Most of the contents are either <b>hidden</b> or <b>sandboxOnly</b>. You should make a custom map first in the <i>Editor</i> to put the tiles and everything. After that, you can go on to <i>Custom Map</i> to test out the contents. Feel free to leave suggestions in the Discord server.</p>
 
 ## Credits
