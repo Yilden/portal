@@ -4,7 +4,7 @@
   //require("blocks/environment/blacktile");
   //require("blocks/environment/whitetile");
   //require("blocks/environment/squaredtile");
-  //require("blocks/environment/goo");
+  require("blocks/environment/goo");
   
   //production
   //require("blocks/production/hardlight");
@@ -37,4 +37,4 @@
   require("units/compcube");
 
 //effects
-  require("effects/electric");
+  //require("effects/electric");
