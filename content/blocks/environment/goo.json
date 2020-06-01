@@ -6,5 +6,6 @@
   "statusDuration": 90,
   "isLiquid": true,
   "drownTime": 90,
-  "cacheLayer": "water"
+  "cacheLayer": "water",
+  "drownUpdateEffect": "lightningCharge"
 }
