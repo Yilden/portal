@@ -6,8 +6,8 @@
   "status": "shocked",
   "statusDuration": 90,
   "isLiquid": true,
-  "drownTime": 90,
+  "drownTime": 40,
   "cacheLayer": "water",
   "hasShadow": false,
-  "drownUpdateEffect": "lightningCharge"
+  "drownUpdateEffect": "lightningShoot"
 }
