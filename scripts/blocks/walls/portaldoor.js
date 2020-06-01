@@ -1,13 +1,13 @@
 const openD = newEffect(10, e => {
-  Draw.color(Color.valueOf("ffde05"));
+  Draw.color(Color.valueOf("ffde05"), Color.valueOf("ffe645"), e.fin());
   Lines.stroke(e.fout() * 1.6);
-  Lines.square(e.x, e.y, this.tilesize + e.fin() * 2);
+  Lines.square(e.x, e.y, 2 + e.fin() * 2);
 });
 
 const closeD = newEffect(10, e => {
-  Draw.color(Color.valueOf("0083cf"));
+  Draw.color(Color.valueOf("0083cf"), Color.valueOf("3da9e8"), e.fin());
   Lines.stroke(e.fout() * 1.6);
-  Lines.square(e.x, e.y, this.tilesize + e.fout() * 2);
+  Lines.square(e.x, e.y, 2 + e.fout() * 2);
 });
 
 const door = extendContent(Door, "portal-door", {
