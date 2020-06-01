@@ -1,11 +1,11 @@
 const openD = newEffect(10, e => {
-  Draw.color(Color.valueOf("ffde05"), Color.valueOf("ffdd00"), e.fin());
+  Draw.color(Color.valueOf("ffde05"));
   Lines.stroke(e.fout() * 1.6);
   Lines.square(e.x, e.y, this.tilesize + e.fin() * 2);
 });
 
 const closeD = newEffect(10, e => {
-  Draw.color(Color.valueOf("0083cf"), Color.valueOf("0092e7"), e.fin());
+  Draw.color(Color.valueOf("0083cf"));
   Lines.stroke(e.fout() * 1.6);
   Lines.square(e.x, e.y, this.tilesize + e.fout() * 2);
 });
