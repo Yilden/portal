@@ -1,3 +1,15 @@
+const openD = newEffect(10, e => {
+  Draw.color(Color.valueOf("ffde05"), Color.valueOf("ffdd00"), e.fin());
+  Lines.stroke(e.fout() * 1.6);
+  Lines.square(e.x, e.y, tilesize + e.fin() * 2);
+});
+
+const closeD = newEffect(10, e => {
+  Draw.color(Color.valueOf("0083cf"), Color.valueOf("0092e7"), e.fin());
+  Lines.stroke(e.fout() * 1.6);
+  Lines.square(e.x, e.y, tilesize + e.fout() * 2);
+});
+
 const door = extendContent(Door, "portal-door", {
  load(){
   this.super$load();
@@ -39,5 +51,8 @@ const door = extendContent(Door, "portal-door", {
   this.super$tapped(tile, player);
  }
 });
+
+door.openfx = openD;
+door.closefx = closeD;
 
 //Thank you sk7725 again.
