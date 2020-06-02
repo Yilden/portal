@@ -8,7 +8,6 @@
  "destructible": false,
  "targetable": false,
  "hasShadow": false,
- "cacheLayer": "water",
  "buildVisibility": "sandboxOnly",
  "outputsPower": true,
  "consumes": {
