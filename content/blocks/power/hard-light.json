@@ -8,6 +8,7 @@
  "destructible": false,
  "targetable": false,
  "buildVisibility": "sandboxOnly",
+ "outputPower": true,
  "consumes": {
   "power": 0.05
  },
