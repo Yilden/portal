@@ -20,7 +20,7 @@ const door = extendContent(Door, "hard-light", {
  
  generateIcons(){
   return [
-   Core.atlas.find(this.name)
+   Core.atlas.find(this.name + "-on")
   ]
  },
  
@@ -28,9 +28,9 @@ const door = extendContent(Door, "hard-light", {
   entity = tile.ent();
     
   if(!entity.open){
-   Draw.rect(this.region, tile.drawx(), tile.drawy(), tile.rotation() - 90);
+   Draw.rect(this.region, tile.drawx(), tile.drawy(), tile.rotation() + 90);
   } else {
-     Draw.rect(this.onRegion, tile.drawx(), tile.drawy(), tile.rotation() - 90);
+     Draw.rect(this.onRegion, tile.drawx(), tile.drawy(), tile.rotation() + 90);
     }
  },
  
