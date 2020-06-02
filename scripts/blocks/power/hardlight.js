@@ -28,9 +28,9 @@ const door = extendContent(Door, "hard-light", {
   entity = tile.ent();
     
   if(!entity.open){
-   Draw.rect(this.region, tile.drawx(), tile.drawy(), this.rotate ? tile.rotation() * 90 : 0);
+   Draw.rect(this.region, tile.drawx(), tile.drawy(), this.rotate ? tile.rotation());
   } else {
-     Draw.rect(this.onRegion, tile.drawx(), tile.drawy(), this.rotate ? tile.rotation() * 90 : 0);
+     Draw.rect(this.onRegion, tile.drawx(), tile.drawy(), this.rotate ? tile.rotation());
     }
  },
  
