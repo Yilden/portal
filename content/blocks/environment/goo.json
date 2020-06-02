@@ -1,6 +1,6 @@
 {
   "type": "Floor",
-  "dragMultiplier": 0,
+  "dragMultiplier": 1,
   "speedMultiplier": 1,
   "damageTaken": 30,
   "variants": 0,
