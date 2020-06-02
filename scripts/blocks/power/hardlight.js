@@ -10,7 +10,7 @@ const closeD = newEffect(10, e => {
   Lines.square(e.x, e.y, 9 + e.fout() * 2);
 });
 
-const door = extendContent(Door, "portal-door", {
+const door = extendContent(Door, "hard-light", {
  load(){
   this.super$load();
    
