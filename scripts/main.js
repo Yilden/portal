@@ -21,6 +21,7 @@
   require("blocks/power/pcircle");
   require("blocks/power/phollow");
   require("blocks/power/finish");
+  require("blocks/power/hardlight");
   
   //walls
   require("blocks/walls/portaldoor");
