@@ -1,3 +1,4 @@
+/*
 const openD = newEffect(10, e => {
   Draw.color(Color.valueOf("ffde05"), Color.valueOf("ffe645"), e.fin());
   Lines.stroke(e.fout() * 2.6);
@@ -9,6 +10,7 @@ const closeD = newEffect(10, e => {
   Lines.stroke(e.fout() * 2.6);
   Lines.square(e.x, e.y, 9 + e.fout() * 2);
 });
+*/
 
 const door = extendContent(Door, "hard-light", {
  load(){
@@ -20,7 +22,7 @@ const door = extendContent(Door, "hard-light", {
  
  generateIcons(){
   return [
-   Core.atlas.find(this.name + "-on")
+   Core.atlas.find(modName + "-hard-light-on")
   ]
  },
  
@@ -52,7 +54,7 @@ const door = extendContent(Door, "hard-light", {
  }
 });
 
-door.openfx = closeD;
-door.closefx = openD;
+door.openfx = Fx.none;
+door.closefx = Fx.none;
 
 //Thank you sk7725 again.
