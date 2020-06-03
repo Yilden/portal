@@ -12,7 +12,6 @@
   "width": 2,
   "lengthRand": 3,
   "shootSound": "sentry-shoot",
-  "deathSound": "sentry-die",
   "bullet": {
      "type": "BasicBulletType",
      "lifetime": 9,
@@ -33,6 +32,7 @@
      "status": "none"
    }
 },
+"deathSound": "sentry-die",
 "health": 20,
 "hitsize": 7,
 "hitsizeTile": 4,
