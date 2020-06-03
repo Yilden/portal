@@ -38,6 +38,7 @@ const door = extendContent(Door, "hard-light", {
      Draw.rect(this.onRegion, tile.drawx(), tile.drawy(), tile.rotation() * 90);
     }
    
+  Draw.color(); 
   Draw.blend();
   Draw.alpha();
  },
