@@ -48,6 +48,10 @@ Blocks
 • Power
   > Chamberlock Platform
     End current game, or test chamber.
+  > Hard Light Bridge Projector
+    Converts light using power into a "hard light" walkable bridge tile. Requires power to activate.
+  > Hard Light Bridge Tile.
+    A walkable hard light bridge tile created from it's projector.
   > Pedestal Button
     Outputs power for a while when something is on top of it.
   > Rectangular Heavy Duty Super Button
