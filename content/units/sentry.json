@@ -30,9 +30,8 @@
      "hitEffect": "none",
      "shootEffect": "none",
      "status": "none"
-   }
+  }
 },
-"deathSound": "sentry-die",
 "health": 20,
 "hitsize": 7,
 "hitsizeTile": 4,
