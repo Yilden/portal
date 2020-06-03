@@ -4,7 +4,7 @@
     "name": "you have incurred my wrath. prepare to die.",
     "bullet": "lancerLaser"
   },
-  "health": 1,
+  "health": 200,
   "speed": 0.1,
   "maxVelocity": 3,
   "drag": 0.05,
