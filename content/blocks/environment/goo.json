@@ -2,7 +2,7 @@
   "type": "Floor",
   "dragMultiplier": 1,
   "speedMultiplier": 1,
-  "damageTaken": 30,
+  "damageTaken": 70,
   "variants": 0,
   "status": "shocked",
   "statusDuration": 90,
