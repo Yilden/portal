@@ -32,12 +32,14 @@ const door = extendContent(Door, "hard-light", {
   if(!entity.open){
    Draw.rect(this.region, tile.drawx(), tile.drawy(), tile.rotation() * 90);
   } else {
+     Draw.color(Color.valueOf("0083cf");
      Draw.blend(Blending.additive);
      Draw.alpha(0.4);
      Draw.rect(this.onRegion, tile.drawx(), tile.drawy(), tile.rotation() * 90);
     }
    
   Draw.blend();
+  Draw.alpha();
  },
  
  update(tile){
