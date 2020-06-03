@@ -24,6 +24,7 @@ This is Aperture Science from the <i>Portal series</i> designed for Mindustry. F
 ## Credits
 
 [**@sk7725**](https://github.com/sk7725) for ~~most~~ some of the codes, check the mod [here](https://github.com/sk7725/Commandblocks).
+[**@Sonnicon**](https://github.com/Sonnicon) for the hard light bridge shader ~~that I stole from.~~
 
 ## Content List
 
