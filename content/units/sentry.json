@@ -12,6 +12,7 @@
   "width": 2,
   "lengthRand": 3,
   "shootSound": "sentry-shoot",
+  "deathSound": "sentry-die",
   "bullet": {
      "type": "BasicBulletType",
      "lifetime": 9,
