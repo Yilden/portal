@@ -38,7 +38,6 @@ const door = extendContent(Door, "hard-light", {
     }
    
   Draw.blend();
-  Draw.alpha();
  },
  
  update(tile){
