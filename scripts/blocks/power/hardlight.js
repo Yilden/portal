@@ -1,16 +1,16 @@
-/*
+
 const openD = newEffect(10, e => {
-  Draw.color(Color.valueOf("ffde05"), Color.valueOf("ffe645"), e.fin());
+  Draw.color(Color.valueOf("ffffff"));
   Lines.stroke(e.fout() * 2.6);
-  Lines.square(e.x, e.y, 9 + e.fin() * 2);
+  Lines.lineAngleCenter(e.x, e.y, e.rotation, 9);
 });
 
 const closeD = newEffect(10, e => {
-  Draw.color(Color.valueOf("0083cf"), Color.valueOf("3da9e8"), e.fin());
+  Draw.color(Color.valueOf("ffffff"));
   Lines.stroke(e.fout() * 2.6);
-  Lines.square(e.x, e.y, 9 + e.fout() * 2);
+  Lines.lineAngleCenter(e.x, e.y, e.rotation, 9);
 });
-*/
+
 //Sonnicon's shader magic
 if(!Vars.headless){
 	importPackage(Packages.arc.graphics.gl);
