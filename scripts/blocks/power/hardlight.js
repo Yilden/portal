@@ -44,8 +44,9 @@ const door = extendContent(Door, "hard-light", {
    Effects.effect(Fx.ripple, tile.drawx(), tile.drawy());
  }
 	
- 
  update(tile){
+  this.super$update(tile);
+  
   var entity = tile.ent();
   if(entity.open && (!entity.cons.valid())){ 
    tile.block().tapped(tile, null);
@@ -61,6 +62,9 @@ const door = extendContent(Door, "hard-light", {
  }
   this.super$tapped(tile, player);
  }
+  Units.nearby(tile.worldx(), tile.worldy(), blockSize, blockSize, cons(e => {
+      this.unitOn(tile, e);
+    }));
 });
 
 door.openfx = Fx.none;
