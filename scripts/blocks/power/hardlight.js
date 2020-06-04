@@ -51,6 +51,11 @@ const door = extendContent(Door, "hard-light", {
   Draw.blend();
   Draw.shader();
  },
+  
+ unitOn(tile, unit){
+   Effects.effect(Fx.ripple);
+ }
+	
  
  update(tile){
   var entity = tile.ent();
@@ -70,7 +75,7 @@ const door = extendContent(Door, "hard-light", {
  }
 });
 
-door.openfx = Fx.none;
-door.closefx = Fx.none;
+door.openfx = Fx.closeD;
+door.closefx = Fx.openD;
 
 //Thank you sk7725 again.
