@@ -40,9 +40,6 @@ const door = extendContent(Door, "hard-light", {
   Draw.shader();
  },
   
- unitOn(tile, unit){
-   Effects.effect(Fx.ripple, tile.drawx(), tile.drawy());
- }
 	
  update(tile){
   this.super$update(tile);
@@ -62,9 +59,6 @@ const door = extendContent(Door, "hard-light", {
  }
   this.super$tapped(tile, player);
  }
-  Units.nearby(tile.worldx(), tile.worldy(), blockSize, blockSize, cons(e => {
-      this.unitOn(tile, e);
-    }));
 });
 
 door.openfx = Fx.none;
