@@ -1,16 +1,4 @@
 
-const openD = newEffect(10, e => {
-  Draw.color(Color.valueOf("ffffff"));
-  Lines.stroke(e.fout() * 2.6);
-  Lines.lineAngleCenter(e.x, e.y, e.rotation, 9);
-});
-
-const closeD = newEffect(10, e => {
-  Draw.color(Color.valueOf("ffffff"));
-  Lines.stroke(e.fout() * 2.6);
-  Lines.lineAngleCenter(e.x, e.y, e.rotation, 9);
-});
-
 //Sonnicon's shader magic
 if(!Vars.headless){
 	importPackage(Packages.arc.graphics.gl);
@@ -75,7 +63,7 @@ const door = extendContent(Door, "hard-light", {
  }
 });
 
-door.openfx = Fx.closeD;
-door.closefx = Fx.openD;
+door.openfx = Fx.none;
+door.closefx = Fx.none;
 
 //Thank you sk7725 again.
