@@ -53,7 +53,7 @@ const door = extendContent(Door, "hard-light", {
  },
   
  unitOn(tile, unit){
-   Effects.effect(Fx.ripple);
+   Effects.effect(Fx.ripple, tile.drawx(), tile.drawy());
  }
 	
  
