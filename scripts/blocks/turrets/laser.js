@@ -1,0 +1,3 @@
+/*
+  A place for the thermal discouragement beam to stay at.
+*/
