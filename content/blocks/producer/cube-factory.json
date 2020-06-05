@@ -1,4 +1,5 @@
 {
+  "type": "UnitFactory",
   "produceTime": 10,
   "launchVelocity": 0.4,
   "size": 2,
