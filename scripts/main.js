@@ -10,7 +10,7 @@
   //require("blocks/production/hardlight");
   
   //producer
-  require("blocks/producer/clauncher");
+  //require("blocks/producer/clauncher");
 
   //storage
   //require("blocks/storage/elevator");
