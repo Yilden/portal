@@ -4,7 +4,7 @@ const spawnEffect = newEffect(10, e => {
   Lines.circle(e.x, e.y, e.fout() * 9);
 }
 
-const cl = extendContent (UnitFactory, "cube-factory", {
+const cl = extendContent(UnitFactory, "cube-factory", {
   load(){
     this.region = Core.atlas.find(this.name);
   },
