@@ -1,7 +1,8 @@
 {
  "type": "Wall",
+ "health": 1,
  "destructible": false,
- "targetable": false,
+ "targetable": true,
  "breakable": true,
  "size": 2,
  "buildVisibility": "sandboxOnly",
