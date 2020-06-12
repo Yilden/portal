@@ -25,6 +25,7 @@
   
   //walls
   require("blocks/walls/portaldoor");
+  require("blocks/walls/wall");
 
 //liquids
   require("liquids/propulsion");
