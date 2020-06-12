@@ -20,7 +20,7 @@ const door = extendContent(Door, "hard-light", {
  
  generateIcons(){
   return [
-   Core.atlas.find(modName + "-hard-light-on")
+   Core.atlas.find(this.name + "-on")
   ]
  },
  
