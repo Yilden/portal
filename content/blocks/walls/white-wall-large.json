@@ -1,5 +1,4 @@
 {
- "type": "Wall",
  "health": 1,
  "destructible": true,
  "targetable": true,
