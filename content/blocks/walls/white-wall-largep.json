@@ -6,5 +6,6 @@
  "size": 2,
  "buildVisibility": "sandboxOnly",
  "category": "defense",
+ "hasPower": true,
  "outputsPower": true
 }
