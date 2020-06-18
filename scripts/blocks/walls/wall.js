@@ -24,7 +24,7 @@ const wWallLarge = extendContent(Wall, "white-wall-large", {
   }
 });
 
-const bWallP = extendContent(Wall, "black-wallp", {
+const bWallP = extendContent(PowerDistributor, "black-wallp", {
   load(){
     this.region = Core.atlas.find(h + "-black-wall");
   },
@@ -41,7 +41,7 @@ const bWallP = extendContent(Wall, "black-wallp", {
   }
 });
 
-const bWallLargeP = extendContent(Wall, "black-wall-largep", {
+const bWallLargeP = extendContent(PowerDistributor, "black-wall-largep", {
   load(){
     this.region = Core.atlas.find(h + "-black-wall-large");
   },
@@ -58,7 +58,7 @@ const bWallLargeP = extendContent(Wall, "black-wall-largep", {
   }
 });
 
-const wWallP = extendContent(Wall, "white-wallp", {
+const wWallP = extendContent(PowerDistributor, "white-wallp", {
   load(){
     this.region = Core.atlas.find(h + "-white-wall");
   },
@@ -75,7 +75,7 @@ const wWallP = extendContent(Wall, "white-wallp", {
   }
 });
 
-const wWallLargeP = extendContent(Wall, "white-wall-largep", {
+const wWallLargeP = extendContent(PowerDistributor, "white-wall-largep", {
   load(){
     this.region = Core.atlas.find(h + "-white-wall-large");
   },
