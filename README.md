@@ -86,6 +86,8 @@ Blocks
     A portal conductor wall.
   > Large White Wall
     A large version of the portal conductor wall.
+  > Power Walls
+    They are the same as the walls above, this time they transfer power to other power transferer. Marked with a yellow dot in the wall category.
   > Doorway
     Allows test subjects to travel between rooms in a test chamber. Requires power to open.
   
