@@ -1,6 +1,6 @@
 title: Portal
-logo: /assets/img/logo.png
-description: A mindustry mod that simulates the world of Aperture Science
+logo: https://raw.githubusercontent.com/Gdeft/portal/master/ticon.png
+description: A mindustry mod that simulates the world of Aperture Science.
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-minimal
+theme: jekyll-theme-hacker
