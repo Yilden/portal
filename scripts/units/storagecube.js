@@ -19,21 +19,21 @@ storagecube.create(prov(() => new JavaAdapter(GroundUnit, {
   behavior(){
     //just..stands
   },
-  
+
   updateTargeting(){
     if(this.target!=null) this.target=null;
   },
-  
+
   onDeath(){
     Effects.effect(gone, this);
     Effects.shake(2, 2, this);
-    
+
     Sounds.bang.at(this);
     this.item.amount = 0;
     this.drownTime = 0;
     Events.fire(EventType.UnitDestroyEvent(this));
   },
-  
+
   update(){
     //this.super$update();
     //BaseUnit
@@ -42,31 +42,31 @@ storagecube.create(prov(() => new JavaAdapter(GroundUnit, {
       this.remove();
       return;
     }
-    
+
     this.hitTime -= Time.delta();
     if(Vars.net.client()){
       this.interpolate();
       this.status.update(this);
       return;
     }
-    
+
     if(!this.isFlying() && (Vars.world.tileWorld(this.x, this.y) != null && !(Vars.world.tileWorld(this.x,this.y).block() instanceof BuildBlock) && Vars.world.tileWorld(this.x, this.y).solid())){
       //when it is stuck in a WALL
       //this.kill();
     }
-    
+
     this.avoidOthers();
     if(this.spawner != this.noSpawner && (Vars.world.tile(this.spawner) == null)){
       //when its factory is in a COFFIN
       this.kill();
     }
-    
+
     this.updateTargeting();
     //this.state.update(); //braindead
-    
+
     this.updateVelocityStatus();
     //if(this.target != null) this.behavior();
-    
+
     if(!this.isFlying()){
       this.clampPosition();
     }
@@ -80,19 +80,19 @@ storagecube.create(prov(() => new JavaAdapter(GroundUnit, {
       this.walkTime += Time.delta();
     }
   },
-  
+
   countsAsEnemy(){
     return false;
   },
-  
+
   drawStats(){
     if(t.global.storagecubea > 0){
       this.drawBackItems(this.item.amount > 0 ? 1 : 0, false);
       this.drawLight();
     }
-    
+
   },
-  
+
   draw(){
     Draw.mixcol(white.a(t.global.storagecubea / 100), this.hitTime / this.hitDuration);
 
