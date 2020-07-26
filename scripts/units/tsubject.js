@@ -55,9 +55,9 @@ bluePortal.smokeEffect = Fx.none;
 bluePortal.hitEffect = bluePortalHit;
 bluePortal.despawnEffect = Fx.none;
 
-const portalGun = extendContent(Weapon, "blue-portal-equip", {
+const portalGun = extendContent(Weapon, "portal-equip", {
   load(){
-    this.region = Core.atlas.find("portal-blue-portal-equip")
+    this.region = Core.atlas.find("portal-portal-equip")
   }
 });
 
@@ -122,6 +122,23 @@ orangePortal.hitEffect = orangePortalHit;
 orangePortal.despawnEffect = Fx.none;
 
 const testSubject = extendContent(Mech, "test-subject", {
+  generateIcons(){
+    return [
+      Core.atlas.find(this.name + "-base"),
+      Core.atlas.find(this.name + "-leg"),
+      Core.atlas.find(this.name),
+      Core.atlas.find("portal-portal-equip")
+    ]
+  },
+
+  isFlying(){
+    return false;
+  },
+
+  drawUnder(){
+    //Nothing
+  },
+
   updateAlt(player){
     if(Core.input.keyTap(key["I"])){
       print("Switched to blue portal")
