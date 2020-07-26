@@ -1,7 +1,7 @@
 const key = Packages.arc.input.KeyCode;
 const col = require("clib");
 
-const paintTrail = newEffect(10, e => {
+const bluePortalTrail = newEffect(10, e => {
   Draw.color(col.darkBlue, col.lightBlue, e.fin());
   const tcir = new Floatc2({get(x, y){
     Fill.circle(e.x + x, e.y + y, e.fout() * 3);
@@ -9,7 +9,7 @@ const paintTrail = newEffect(10, e => {
   Angles.randLenVectors(e.id, 3, e.fin() * 5, e.rotation, 5, tcir)
 });
 
-const paintShoot = newEffect(24, e => {
+const bluePortalShoot = newEffect(24, e => {
   Draw.color(col.darkBlue, col.lightBlue, e.fin());
   const cir = new Floatc2({get(x, y){
     Fill.circle(e.x + x, e.y + y, e.fout() * 3);
@@ -18,7 +18,7 @@ const paintShoot = newEffect(24, e => {
   Angles.randLenVectors(e.id, 10, e.finpow() * 50 , e.rotation, 10, cir);
 });
 
-const paintHit = newEffect(14, e => {
+const bluePortalHit = newEffect(14, e => {
   Draw.color(col.darkBlue, col.lightBlue, e.fin());
 
   Lines.stroke(0.5 + e.fout());
@@ -33,7 +33,7 @@ const paintHit = newEffect(14, e => {
   Angles.randLenVectors(e.id, 6, e.fin() * 15, e.rotation, 7, hcir)
 });
 
-const paint = extend(BasicBulletType, {
+const bluePortal = extend(BasicBulletType, {
   draw(b){
     Draw.color(col.darkBlue, col.lightBlue, b.fin())
     for(i = 0; i < 3; i++) Fill.circle(b.x, b.y, 1 + i)
@@ -41,38 +41,96 @@ const paint = extend(BasicBulletType, {
 
   update(b){
     if(b.timer.get(1, 4)){
-      Effects.effect(paintTrail, b.x, b.y, b.rot());
+      Effects.effect(bluePortalTrail, b.x, b.y, b.rot());
     }
   }
 });
 
-paint.lifetime = Number.MAX_VALUE;
-paint.damage = 0;
-paint.speed = 5;
-paint.shootEffect = paintShoot;
-paint.smokeEffect = Fx.none;
-paint.hitEffect = paintHit;
-paint.despawnEffect = Fx.none;
+bluePortal.lifetime = Number.MAX_VALUE;
+bluePortal.damage = 0;
+bluePortal.speed = 5;
+bluePortal.shootEffect = bluePortalShoot;
+bluePortal.smokeEffect = Fx.none;
+bluePortal.hitEffect = bluePortalHit;
+bluePortal.despawnEffect = Fx.none;
 
-const portalGun = extendContent(Weapon, "portal-gun", {
-  load(){
-    this.region = Core.atlas.find(this.name)
+const bluePortalGun = extendContent(Weapon, "blue-portal", {});
+
+bluePortalGun.alternate = true;
+bluePortalGun.bullet = bluePortal;
+bluePortalGun.reload = 60;
+bluePortalGun.shootEffect = Fx.none;
+
+const orangePortalTrail = newEffect(10, e => {
+  Draw.color(col.darkOrange, col.lightOrange, e.fin());
+  const tcir = new Floatc2({get(x, y){
+    Fill.circle(e.x + x, e.y + y, e.fout() * 3);
+  }})
+  Angles.randLenVectors(e.id, 3, e.fin() * 5, e.rotation, 5, tcir)
+});
+
+const orangePortalShoot = newEffect(24, e => {
+  Draw.color(col.darkOrange, col.lightOrange, e.fin());
+  const cir = new Floatc2({get(x, y){
+    Fill.circle(e.x + x, e.y + y, e.fout() * 3);
+    Fill.circle(e.x + x, e.y + y, e.fout() * 4);
+    }});
+  Angles.randLenVectors(e.id, 10, e.finpow() * 50 , e.rotation, 10, cir);
+});
+
+const orangePortalHit = newEffect(14, e => {
+  Draw.color(col.darkOrange, col.lightOrange, e.fin());
+
+  Lines.stroke(0.5 + e.fout());
+  Lines.circle(e.x, e.y, e.fin() * 5);
+
+  Lines.stroke(0.5 + e.fout())
+  const hcir = new Floatc2({get(x, y){
+    ang = Mathf.angle(x, y)
+    Lines.lineAngle(e.x + x, e.y + y, ang, e.fout() * 6 + 3)
+    Fill.circle(e.x + x, e.y + y, e.fout() * 5)
+  }});
+  Angles.randLenVectors(e.id, 6, e.fin() * 15, e.rotation, 7, hcir)
+});
+
+const orangePortal = extend(BasicBulletType, {
+  draw(b){
+    Draw.color(col.darkOrange, col.lightOrange, b.fin())
+    for(i = 0; i < 3; i++) Fill.circle(b.x, b.y, 1 + i)
+  },
+
+  update(b){
+    if(b.timer.get(1, 4)){
+      Effects.effect(orangePortalTrail, b.x, b.y, b.rot());
+    }
   }
 });
 
-portalGun.alternate = true;
-portalGun.bullet = paint;
-portalGun.reload = 60;
-portalGun.shootEffect = Fx.none;
+orangePortal.lifetime = Number.MAX_VALUE;
+orangePortal.damage = 0;
+orangePortal.speed = 5;
+orangePortal.shootEffect = orangePortalShoot;
+orangePortal.smokeEffect = Fx.none;
+orangePortal.hitEffect = orangePortalHit;
+orangePortal.despawnEffect = Fx.none;
+
+const orangePortalGun = extendContent(Weapon, "orange-portal", {});
+
+orangePortalGun.alternate = true;
+orangePortalGun.bullet = orangePortal;
+orangePortalGun.reload = 60;
+orangePortalGun.shootEffect = Fx.none;
 
 const testSubject = extendContent(Mech, "test-subject", {
   updateAlt(player){
     if(Core.input.keyTap(key["I"])){
-      print("blue portal")
+      print("Switched to blue portal")
+      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon = bluePortalGun;
     }
 
     else if(Core.input.keyTap(key["O"])){
-      print("orange portal")
+      print("Switched to orange portal")
+      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon = orangePortalGun;
     }
   }
 });
@@ -86,7 +144,7 @@ testSubject.hbuildPower = 0.5;
 testSubject.flying = false;
 testSubject.health = 400;
 testSubject.drawCell = false;
-testSubject.weapon = portalGun;
+testSubject.weapon = bluePortalGun;
 
 const subjectPad = extendContent(MechPad, "test-subject-pad", {});
 
