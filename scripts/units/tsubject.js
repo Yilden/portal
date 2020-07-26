@@ -15,7 +15,7 @@ const bluePortalShoot = newEffect(24, e => {
     Fill.circle(e.x + x, e.y + y, e.fout() * 3);
     Fill.circle(e.x + x, e.y + y, e.fout() * 4);
     }});
-  Angles.randLenVectors(e.id, 10, e.finpow() * 50 , e.rotation, 10, cir);
+  Angles.randLenVectors(e.id, 10, e.finpow() * 40 , e.rotation, 6, cir);
 });
 
 const bluePortalHit = newEffect(14, e => {
@@ -27,7 +27,7 @@ const bluePortalHit = newEffect(14, e => {
   Lines.stroke(0.5 + e.fout())
   const hcir = new Floatc2({get(x, y){
     ang = Mathf.angle(x, y)
-    Lines.lineAngle(e.x + x, e.y + y, ang, e.fout() * 6 + 3)
+    Lines.lineAngle(e.x + x, e.y + y, ang, e.fout() * 8 + 3)
     Fill.circle(e.x + x, e.y + y, e.fout() * 5)
   }});
   Angles.randLenVectors(e.id, 6, e.fin() * 15, e.rotation, 7, hcir)
@@ -48,7 +48,8 @@ const bluePortal = extend(BasicBulletType, {
 
 bluePortal.lifetime = Number.MAX_VALUE;
 bluePortal.damage = 0;
-bluePortal.speed = 5;
+bluePortal.speed = 7;
+bluePortal.collidesTeam = true;
 bluePortal.shootEffect = bluePortalShoot;
 bluePortal.smokeEffect = Fx.none;
 bluePortal.hitEffect = bluePortalHit;
@@ -80,7 +81,7 @@ const orangePortalShoot = newEffect(24, e => {
     Fill.circle(e.x + x, e.y + y, e.fout() * 3);
     Fill.circle(e.x + x, e.y + y, e.fout() * 4);
     }});
-  Angles.randLenVectors(e.id, 10, e.finpow() * 50 , e.rotation, 10, cir);
+  Angles.randLenVectors(e.id, 10, e.finpow() * 40 , e.rotation, 6, cir);
 });
 
 const orangePortalHit = newEffect(14, e => {
@@ -92,7 +93,7 @@ const orangePortalHit = newEffect(14, e => {
   Lines.stroke(0.5 + e.fout())
   const hcir = new Floatc2({get(x, y){
     ang = Mathf.angle(x, y)
-    Lines.lineAngle(e.x + x, e.y + y, ang, e.fout() * 6 + 3)
+    Lines.lineAngle(e.x + x, e.y + y, ang, e.fout() * 8 + 3)
     Fill.circle(e.x + x, e.y + y, e.fout() * 5)
   }});
   Angles.randLenVectors(e.id, 6, e.fin() * 15, e.rotation, 7, hcir)
@@ -113,7 +114,8 @@ const orangePortal = extend(BasicBulletType, {
 
 orangePortal.lifetime = Number.MAX_VALUE;
 orangePortal.damage = 0;
-orangePortal.speed = 5;
+orangePortal.speed = 7;
+orangePortal.collidesTeam = true;
 orangePortal.shootEffect = orangePortalShoot;
 orangePortal.smokeEffect = Fx.none;
 orangePortal.hitEffect = orangePortalHit;
@@ -142,7 +144,7 @@ testSubject.hbuildPower = 0.5;
 testSubject.flying = false;
 testSubject.health = 400;
 testSubject.drawCell = false;
-testSubject.weapon = bluePortalGun;
+testSubject.weapon = portalGun;
 
 const subjectPad = extendContent(MechPad, "test-subject-pad", {});
 
