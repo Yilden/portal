@@ -18,7 +18,7 @@
   require("liquids/conversion");
   //require("liquids/pure");
 
-//units
+//units & mechs
   require("units/sentry");
   require("units/storagecube");
   require("units/compcube");

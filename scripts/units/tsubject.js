@@ -39,8 +39,23 @@ const bluePortal = extend(BasicBulletType, {
     for(i = 0; i < 3; i++) Fill.circle(b.x, b.y, 1 + i)
   },
 
+  collides(b, tile){
+    if(tile.block() instanceof Door){
+      if(tile.ent().open) return false;
+      else {
+        return true;
+      }
+    }
+
+    if(tile.block().solid == false){
+      return false;
+    } else {
+      return true;
+    }
+  },
+
   update(b){
-    if(b.timer.get(1, 4)){
+    if(b.timer.get(1, 3)){
       Effects.effect(bluePortalTrail, b.x, b.y, b.rot());
     }
   }
@@ -105,8 +120,23 @@ const orangePortal = extend(BasicBulletType, {
     for(i = 0; i < 3; i++) Fill.circle(b.x, b.y, 1 + i)
   },
 
+  collides(b, tile){
+    if(tile.block() instanceof Door){
+      if(tile.ent().open) return false;
+      else {
+        return true;
+      }
+    }
+
+    if(tile.block().solid == false){
+      return false;
+    } else {
+      return true;
+    }
+  },
+
   update(b){
-    if(b.timer.get(1, 4)){
+    if(b.timer.get(1, 3)){
       Effects.effect(orangePortalTrail, b.x, b.y, b.rot());
     }
   }
@@ -167,3 +197,4 @@ const subjectPad = extendContent(MechPad, "test-subject-pad", {});
 
 subjectPad.mech = testSubject;
 subjectPad.buildVisibility = BuildVisibility.sandboxOnly;
+subjectPad.buildTime = 1;
