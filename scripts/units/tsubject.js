@@ -54,12 +54,17 @@ bluePortal.smokeEffect = Fx.none;
 bluePortal.hitEffect = bluePortalHit;
 bluePortal.despawnEffect = Fx.none;
 
-const bluePortalGun = extendContent(Weapon, "blue-portal", {});
+const portalGun = extendContent(Weapon, "blue-portal-equip", {
+  load(){
+    this.region = Core.atlas.find("portal-blue-portal-equip")
+  }
+});
 
-bluePortalGun.alternate = true;
-bluePortalGun.bullet = bluePortal;
-bluePortalGun.reload = 60;
-bluePortalGun.shootEffect = Fx.none;
+portalGun.length = 1.5;
+portalGun.alternate = true;
+portalGun.bullet = bluePortal;
+portalGun.reload = 60;
+portalGun.shootEffect = Fx.none;
 
 const orangePortalTrail = newEffect(10, e => {
   Draw.color(col.darkOrange, col.lightOrange, e.fin());
@@ -114,23 +119,16 @@ orangePortal.smokeEffect = Fx.none;
 orangePortal.hitEffect = orangePortalHit;
 orangePortal.despawnEffect = Fx.none;
 
-const orangePortalGun = extendContent(Weapon, "orange-portal", {});
-
-orangePortalGun.alternate = true;
-orangePortalGun.bullet = orangePortal;
-orangePortalGun.reload = 60;
-orangePortalGun.shootEffect = Fx.none;
-
 const testSubject = extendContent(Mech, "test-subject", {
   updateAlt(player){
     if(Core.input.keyTap(key["I"])){
       print("Switched to blue portal")
-      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon = bluePortalGun;
+      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon.bullet = bluePortal;
     }
 
     else if(Core.input.keyTap(key["O"])){
       print("Switched to orange portal")
-      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon = orangePortalGun;
+      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon.bullet = orangePortal;
     }
   }
 });
