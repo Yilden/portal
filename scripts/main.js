@@ -18,3 +18,6 @@
   require("units/storagecube");
   require("units/compcube");
   require("units/tsubject");
+
+//campaign
+  require("campaign/bportal")
