@@ -122,7 +122,7 @@ const orangePortal = extend(BasicBulletType, {
 
   collides(b, tile){
     if(tile.block() instanceof Door){
-      return (!tile.ent().open)
+      return (!tile.ent().open);
     }
     if(tile.block().solid == false){
       return false;
