@@ -41,10 +41,10 @@ const bPortal = extendContent(Block, "blue-portal", {
       }
     }
 
-    if(tile.getNearbyLink(0).block().name.startsWith("portal-conductor") ||
-     tile.getNearbyLink(1).block().name.startsWith("portal-conductor") ||
-     tile.getNearbyLink(2).block().name.startsWith("portal-conductor") ||
-     tile.getNearbyLink(3).block().name.startsWith("portal-conductor")) return;
+    if(tile != null && tile.getNearbyLink(0).block().name.startsWith("portal-conductor") ||
+     tile != null && tile.getNearbyLink(1).block().name.startsWith("portal-conductor") ||
+     tile != null && tile.getNearbyLink(2).block().name.startsWith("portal-conductor") ||
+     tile != null && tile.getNearbyLink(3).block().name.startsWith("portal-conductor")) return;
     else { tile.remove() }
   }
 });
