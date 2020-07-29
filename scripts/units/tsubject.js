@@ -168,12 +168,12 @@ const testSubject = extendContent(Mech, "test-subject", {
   updateAlt(player){
     if(Core.input.keyTap(key["I"])){
       print("Switched to blue portal")
-      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon.bullet = bluePortal;
+      this.weapon.bullet = bluePortal;
     }
 
     else if(Core.input.keyTap(key["O"])){
       print("Switched to orange portal")
-      Vars.content.getByName(ContentType.mech, "portal-test-subject").weapon.bullet = orangePortal;
+      this.weapon.bullet = orangePortal;
     }
   }
 });

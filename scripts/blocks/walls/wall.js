@@ -1,95 +1,93 @@
 const h = "portal";
 
-const bWall = extendContent(Wall, "black-wall", {
+const bWall = extendContent(Wall, "isolator-wall", {
   handleBulletHit(entity, b){
     entity.damage(0);
   }
 });
 
-const bWallLarge = extendContent(Wall, "black-wall-large", {
+const bWallLarge = extendContent(Wall, "isolator-wall-large", {
   handleBulletHit(entity, b){
     entity.damage(0);
   }
 });
 
-const wWall = extendContent(Wall, "white-wall", {
-  handleBulletHit(entity, b){
-    entity.damage(0);
-  }
-});
-
-const wWallLarge = extendContent(Wall, "white-wall-large", {
-  handleBulletHit(entity, b){
-    entity.damage(0);
-  }
-});
-
-const bWallP = extendContent(PowerDistributor, "black-wallp", {
+const bWallP = extendContent(PowerDistributor, "isolator-wallp", {
   load(){
-    this.region = Core.atlas.find(h + "-black-wall");
+    this.region = Core.atlas.find(h + "-isolator-wall");
   },
-  
+
   generateIcons(){
     return [
-      Core.atlas.find(h + "-black-wall"),
+      Core.atlas.find(h + "-isolator-wall"),
       Core.atlas.find(h + "-pmark")
     ]
   },
-  
+
   handleBulletHit(entity, b){
     entity.damage(0);
   }
 });
 
-const bWallLargeP = extendContent(PowerDistributor, "black-wall-largep", {
+const bWallLargeP = extendContent(PowerDistributor, "isolator-wall-largep", {
   load(){
-    this.region = Core.atlas.find(h + "-black-wall-large");
+    this.region = Core.atlas.find(h + "-isolator-wall-large");
   },
-  
+
   generateIcons(){
     return [
-      Core.atlas.find(h + "-black-wall-large"),
+      Core.atlas.find(h + "-isolator-wall-large"),
       Core.atlas.find(h + "-pmark-large")
     ]
   },
-  
+
   handleBulletHit(entity, b){
     entity.damage(0);
   }
 });
 
-const wWallP = extendContent(PowerDistributor, "white-wallp", {
+const wWall = extendContent(Wall, "conductor-wall", {
+  handleBulletHit(entity, b){
+    entity.damage(0);
+  }
+});
+
+const wWallLarge = extendContent(Wall, "conductor-wall-large", {
+  handleBulletHit(entity, b){
+    entity.damage(0);
+  }
+});
+
+const wWallP = extendContent(PowerDistributor, "conductor-wallp", {
   load(){
-    this.region = Core.atlas.find(h + "-white-wall");
+    this.region = Core.atlas.find(h + "-conductor-wall");
   },
-  
+
   generateIcons(){
     return [
-      Core.atlas.find(h + "-white-wall"),
+      Core.atlas.find(h + "-conductor-wall"),
       Core.atlas.find(h + "-pmark")
     ]
   },
-  
+
   handleBulletHit(entity, b){
     entity.damage(0);
   }
 });
 
-const wWallLargeP = extendContent(PowerDistributor, "white-wall-largep", {
+const wWallLargeP = extendContent(PowerDistributor, "conductor-wall-largep", {
   load(){
-    this.region = Core.atlas.find(h + "-white-wall-large");
+    this.region = Core.atlas.find(h + "-conductor-wall-large");
   },
-  
+
   generateIcons(){
     return [
-      Core.atlas.find(h + "-white-wall-large"),
+      Core.atlas.find(h + "-conductor-wall-large"),
       Core.atlas.find(h + "-pmark-large")
     ]
   },
-  
+
   handleBulletHit(entity, b){
     entity.damage(0);
   }
 });
-
-
