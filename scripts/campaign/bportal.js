@@ -8,22 +8,22 @@ const bPortal = extendContent(Block, "blue-portal", {
   draw(tile){
     if(tile.getNearbyLink(0) && tile.getNearbyLink(0).block().name.startsWith("portal-conductor")){
       Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 270)
+      Draw.rect(this.region, tile.drawx(), tile.drawy(), 0)
       Draw.reset()
     }
     else if(tile.getNearbyLink(1) && tile.getNearbyLink(1).block().name.startsWith("portal-conductor")){
       Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 0)
+      Draw.rect(this.region, tile.drawx(), tile.drawy(), 90)
       Draw.reset()
     }
     else if(tile.getNearbyLink(2) && tile.getNearbyLink(2).block().name.startsWith("portal-conductor")){
       Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 90)
+      Draw.rect(this.region, tile.drawx(), tile.drawy(), 180)
       Draw.reset()
     }
     else if(tile.getNearbyLink(3) && tile.getNearbyLink(3).block().name.startsWith("portal-conductor")){
       Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 180)
+      Draw.rect(this.region, tile.drawx(), tile.drawy(), 270)
       Draw.reset()
     } else {
       return;
