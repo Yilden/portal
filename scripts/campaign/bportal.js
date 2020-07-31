@@ -23,6 +23,17 @@ const bPortal = extendContent(Block, "blue-portal", {
     }
   },
 
+  setBars(){
+      this.bars.add("portal", new Func({
+				get: function(entity){
+					return new Bar(prov(() => (Core.bundle.get("bar.portal") + ": " + entity.bundlePortal())), prov(() => clib.darkBlue), new Floatp({get: function(){
+						return entity.getSignal();
+					}
+				}));
+			}
+		}));
+  },
+
   update(tile){
     this.super$update(tile);
     entity = tile.ent();
@@ -33,12 +44,9 @@ const bPortal = extendContent(Block, "blue-portal", {
     if(Vars.state.is(GameState.State.playing)){
       if(htile != null && htile.block() instanceof Block){
         if(htile.block().name === "conduit"){
-          if(htile != null){
             print(htile)
             entity.setPortal(htile)
-          } else {
-            entity.setPortal(null)
-          }
+            entity.setSignal(1)
         }
       }
     }
@@ -71,8 +79,27 @@ bPortal.entityType = prov(() => {
 
     setPortal(ptile){
       this._otherportal = ptile;
+    },
+
+    hasPortal(){
+      if(entity.getPortal() !== null) return true;
+      else { return false }
+    },
+
+    bundlePortal(){
+      if(entity.hasPortal()) return "Activated"
+      else { return "Deactivated" }
+    },
+
+    getSignal(){
+      return this._signal;
+    },
+
+    setSignal(signal){
+      this._signal = signal;
     }
   });
+  entity.setSignal(0)
   entity.setPortal(null)
   return entity;
 });

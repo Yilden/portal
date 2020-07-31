@@ -157,23 +157,21 @@ const testSubject = extendContent(Mech, "test-subject", {
     ]
   },
 
-  isFlying(){
-    return false;
-  },
-
   drawUnder(){
     //Nothing
   },
 
   updateAlt(player){
     if(Core.input.keyTap(key["I"])){
-      print("Switched to blue portal")
       this.weapon.bullet = bluePortal;
     }
 
     else if(Core.input.keyTap(key["O"])){
-      print("Switched to orange portal")
       this.weapon.bullet = orangePortal;
+    }
+
+    if(player.isBoosting){
+      Call.onPlayerDeath(player)
     }
   }
 });
@@ -185,8 +183,9 @@ testSubject.speed = 0.5;
 testSubject.itemCapacity = 0;
 testSubject.hbuildPower = 0.5;
 testSubject.flying = false;
-testSubject.health = 400;
+testSubject.health = 360;
 testSubject.drawCell = false;
+testSubject.engineSize = 0;
 testSubject.weapon = portalGun;
 
 const subjectPad = extendContent(MechPad, "test-subject-pad", {});
