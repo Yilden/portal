@@ -1,30 +1,23 @@
-const conductors = ["portal-conductor-wall", "portal-conductor-wall-large", "portal-conductor-wallp", "portal-conductor-wall-largep"]
+const plib = require("portallib")
 const clib = require("clib")
+
 const bPortal = extendContent(Block, "blue-portal", {
   load(){
     this.region = Core.atlas.find("portal-pmark")
   },
 
   draw(tile){
-    if(tile.getNearbyLink(0) && tile.getNearbyLink(0).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 0)
-      Draw.reset()
+    if(tile.getNearbyLink(0) && plib.isConductor(tile.getNearbyLink(0))){
+      plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 0)
     }
-    else if(tile.getNearbyLink(1) && tile.getNearbyLink(1).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 90)
-      Draw.reset()
+    else if(tile.getNearbyLink(1) && plib.isConductor(tile.getNearbyLink(1))){
+      plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 90)
     }
-    else if(tile.getNearbyLink(2) && tile.getNearbyLink(2).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 180)
-      Draw.reset()
+    else if(tile.getNearbyLink(2) && plib.isConductor(tile.getNearbyLink(2))){
+      plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 180)
     }
-    else if(tile.getNearbyLink(3) && tile.getNearbyLink(3).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkBlue, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 270)
-      Draw.reset()
+    else if(tile.getNearbyLink(3) && plib.isConductor(tile.getNearbyLink(3))){
+      plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 270)
     } else {
       return;
     }
@@ -32,20 +25,35 @@ const bPortal = extendContent(Block, "blue-portal", {
 
   update(tile){
     this.super$update(tile);
+    entity = tile.ent();
+
     v1 = Core.camera.unproject(Mathf.random() * Core.graphics.getWidth(), Mathf.random() * Core.graphics.getHeight());
     htile = Vars.world.tileWorld(v1.x, v1.y);
 
     if(Vars.state.is(GameState.State.playing)){
       if(htile != null && htile.block() instanceof Block){
-        print(htile)
+        if(htile.block().name === "conduit"){
+          if(htile != null){
+            print(htile)
+            entity.setPortal(htile)
+          } else {
+            entity.setPortal(null)
+          }
+        }
       }
     }
 
-    if(tile != null && tile.getNearbyLink(0).block().name.startsWith("portal-conductor") ||
-     tile != null && tile.getNearbyLink(1).block().name.startsWith("portal-conductor") ||
-     tile != null && tile.getNearbyLink(2).block().name.startsWith("portal-conductor") ||
-     tile != null && tile.getNearbyLink(3).block().name.startsWith("portal-conductor")) return;
+    if(tile != null && plib.isConductor(tile.getNearbyLink(0)) ||
+     tile != null && plib.isConductor(tile.getNearbyLink(1)) ||
+     tile != null && plib.isConductor(tile.getNearbyLink(2)) ||
+     tile != null && plib.isConductor(tile.getNearbyLink(3))) return;
     else { tile.remove() }
+  },
+
+  unitOn(tile, unit){
+    if(unit == Vars.player && entity.getPortal() !== null){
+      Vars.player.set(entity.getPortal().getX(), entity.getPortal().getY())
+    }
   }
 });
 
@@ -55,3 +63,16 @@ bPortal.destructible = false;
 bPortal.solid = false;
 bPortal.hasShadow = false;
 bPortal.requirements = ItemStack.with(Items.copper, 1)
+bPortal.entityType = prov(() => {
+  const entity = extend(TileEntity, {
+    getPortal(){
+      return this._otherportal;
+    },
+
+    setPortal(ptile){
+      this._otherportal = ptile;
+    }
+  });
+  entity.setPortal(null)
+  return entity;
+});
