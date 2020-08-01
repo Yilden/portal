@@ -1,56 +1,37 @@
-const clib = require("clib")
-const oPortal = extendContent(Block, "orange-portal", {
-  load(){
-    this.region = Core.atlas.find("portal-pmark")
-  },
-
-  draw(tile){
-    if(tile.getNearbyLink(0) && tile.getNearbyLink(0).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkOrange, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 0)
-      Draw.reset()
-    }
-    else if(tile.getNearbyLink(1) && tile.getNearbyLink(1).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkOrange, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 90)
-      Draw.reset()
-    }
-    else if(tile.getNearbyLink(2) && tile.getNearbyLink(2).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkOrange, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 180)
-      Draw.reset()
-    }
-    else if(tile.getNearbyLink(3) && tile.getNearbyLink(3).block().name.startsWith("portal-conductor")){
-      Draw.mixcol(clib.darkOrange, 1)
-      Draw.rect(this.region, tile.drawx(), tile.drawy(), 270)
-      Draw.reset()
-    } else {
-      return;
-    }
-  },
-
-  update(tile){
-    this.super$update(tile);
-    v1 = Core.camera.unproject(Mathf.random() * Core.graphics.getWidth(), Mathf.random() * Core.graphics.getHeight());
-    htile = Vars.world.tileWorld(v1.x, v1.y);
-
-    if(Vars.state.is(GameState.State.playing)){
-      if(htile != null && htile.block() instanceof Block){
-        print(htile)
+const hPortal = extendContent(PowerNode, "h-portal", {
+  unitOn(tile, unit){
+    if(unit == Vars.player){
+      print("Player detected")
+      var linked = tile.link()
+      if(linked.block().name !== "portal-h-portal"){
+        unit.set(linked.getX(), linked.getY())
       }
     }
-
-    if(tile != null && tile.getNearbyLink(0).block().name.startsWith("portal-conductor") ||
-     tile != null && tile.getNearbyLink(1).block().name.startsWith("portal-conductor") ||
-     tile != null && tile.getNearbyLink(2).block().name.startsWith("portal-conductor") ||
-     tile != null && tile.getNearbyLink(3).block().name.startsWith("portal-conductor")) return;
-    else { tile.remove() }
   }
 });
 
-oPortal.buildVisibility = BuildVisibility.sandboxOnly;
-oPortal.update = true;
-oPortal.destructible = false;
-oPortal.solid = false;
-oPortal.hasShadow = false;
-oPortal.requirements = ItemStack.with(Items.copper, 1)
+hPortal.buildVisibility = BuildVisibility.sandboxOnly;
+hPortal.update = true;
+hPortal.destructible = false;
+hPortal.solid = false;
+hPortal.hasShadow = false;
+hPortal.requirements = ItemStack.with(Items.copper, 1)
+
+const hhPortal = extendContent(PowerNode, "hh-portal", {
+  unitOn(tile, unit){
+    if(unit == Vars.player){
+      var linked = tile.link()
+      if(linked.block().name == "portal-h-portal"){
+        unit.set(linked.getX(), linked.getY())
+        print("Teleported player")
+      }
+    }
+  }
+});
+
+hhPortal.buildVisibility = BuildVisibility.sandboxOnly;
+hhPortal.update = true;
+hhPortal.destructible = false;
+hhPortal.solid = false;
+hhPortal.hasShadow = false;
+hhPortal.requirements = ItemStack.with(Items.copper, 1)

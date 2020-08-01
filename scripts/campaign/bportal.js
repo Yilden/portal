@@ -53,9 +53,9 @@ const bPortal = extendContent(Block, "blue-portal", {
     if(Vars.state.is(GameState.State.playing)){
       if(htile != null && htile.block() instanceof Block){
         if(htile.block().name === "conduit"){
-            print(htile)
-            entity.setPortal(htile)
-            entity.setSignal(1)
+          print(htile)
+          entity.setPortal(htile)
+          entity.setSignal(1)
         }
       }
     }
