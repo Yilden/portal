@@ -1,6 +1,7 @@
 const key = Packages.arc.input.KeyCode;
 const col = require("clib");
 const plib = require("portallib")
+const config = require("config")
 
 const bluePortalTrail = newEffect(10, e => {
   Draw.color(col.darkBlue, col.lightBlue, e.fin());
@@ -150,15 +151,15 @@ orangePortal.despawnEffect = Fx.none;
 
 const testSubject = extendContent(Mech, "test-subject", {
   draw(player){
-    this.weapon.bullet == orangePortal ? plib.drawPortal(col.lightOrange, this.indRegion, player.x + 7, player.y + 7, 0) : plib.drawPortal(col.lightBlue, this.indRegion, player.x + 7, player.y + 7, 0)
+    if(config.showIndicator) this.weapon.bullet == orangePortal ? plib.drawPortal(col.lightOrange, this.indRegion, player.x + 7, player.y + 7, 0) : plib.drawPortal(col.lightBlue, this.indRegion, player.x + 7, player.y + 7, 0)
   },
 
   updateAlt(player){
-    if(Core.input.keyTap(key["I"])){
+    if(Core.input.keyTap(key[config.switchBlue])){
       this.weapon.bullet = bluePortal;
     }
 
-    else if(Core.input.keyTap(key["O"])){
+    else if(Core.input.keyTap(key[config.switchOrange])){
       this.weapon.bullet = orangePortal;
     }
 
@@ -187,6 +188,7 @@ testSubject.weapon = portalGun;
 
 const subjectPad = extendContent(MechPad, "test-subject-pad", {});
 
+subjectPad.size = 2;
 subjectPad.mech = testSubject;
 subjectPad.buildVisibility = BuildVisibility.sandboxOnly;
 subjectPad.buildTime = 1;

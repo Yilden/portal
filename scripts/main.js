@@ -25,3 +25,6 @@
 //libraries
   require("clib")
   require("portallib")
+
+//Configuration
+  require("config")
