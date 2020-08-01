@@ -21,7 +21,7 @@
 
 //campaign
   require("campaign/bportal")
-  require("campaign/oportal")
+  //require("campaign/oportal")
 
 //libraries
   require("clib")
