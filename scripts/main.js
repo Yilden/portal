@@ -29,3 +29,4 @@
 
 //Configuration
   require("config")
+  require("note")
