@@ -24,14 +24,23 @@ const bPortal = extendContent(Block, "blue-portal", {
   },
 
   setBars(){
-      this.bars.add("portal", new Func({
-				get: function(entity){
-					return new Bar(prov(() => (Core.bundle.get("bar.portal") + ": " + entity.bundlePortal())), prov(() => clib.darkBlue), new Floatp({get: function(){
-						return entity.getSignal();
-					}
-				}));
-			}
-		}));
+    this.bars.add("portal", new Func({
+      get: function(entity){
+        return new Bar(prov(() => (Core.bundle.get("bar.portal") + ": " + entity.bundlePortal())), prov(() => clib.lightBlue), new Floatp({get: function(){
+          return entity.getSignal();
+          }
+        }));
+      }
+    }));
+
+    this.bars.add("portal-disabling", new Func({
+      get: function(entity){
+        return new Bar(prov(() => (Core.bundle.get("bar.portal.disabling") + entity.getTimer() + "s")), prov(() => clib.darkBlue), new Floatp({get: function(){
+          return entity.getTimer();
+          }
+        }));
+      }
+    }));
   },
 
   update(tile){
@@ -51,10 +60,17 @@ const bPortal = extendContent(Block, "blue-portal", {
       }
     }
 
-    if(tile != null && plib.isConductor(tile.getNearbyLink(0)) ||
-     tile != null && plib.isConductor(tile.getNearbyLink(1)) ||
-     tile != null && plib.isConductor(tile.getNearbyLink(2)) ||
-     tile != null && plib.isConductor(tile.getNearbyLink(3))) return;
+    if(entity.hasPortal() && entity.timer.get(this.portalTimer, 60)){
+      entity.setTimer(entity.getTimer() - 1)
+    }
+
+    if(entity.getTimer() <= 0){
+      entity.setPortal(null);
+      entity.setTimer(15)
+      entity.setSignal(0)
+    }
+
+    if(plib.isConductor(tile.getNearbyLink(0)) || plib.isConductor(tile.getNearbyLink(1)) || plib.isConductor(tile.getNearbyLink(2)) || plib.isConductor(tile.getNearbyLink(3))) return;
     else { tile.remove() }
   },
 
@@ -71,6 +87,7 @@ bPortal.destructible = false;
 bPortal.solid = false;
 bPortal.hasShadow = false;
 bPortal.requirements = ItemStack.with(Items.copper, 1)
+bPortal.portalTimer = bPortal.timers++;
 bPortal.entityType = prov(() => {
   const entity = extend(TileEntity, {
     getPortal(){
@@ -87,7 +104,7 @@ bPortal.entityType = prov(() => {
     },
 
     bundlePortal(){
-      if(entity.hasPortal()) return "Enabled"
+      if(entity.hasPortal()) return "Enabled";
       else { return "Disabled" }
     },
 
@@ -97,8 +114,17 @@ bPortal.entityType = prov(() => {
 
     setSignal(signal){
       this._signal = signal;
+    },
+
+    getTimer(){
+      return this._timer;
+    },
+
+    setTimer(time){
+      this._timer = time;
     }
   });
+  entity.setTimer(15)
   entity.setSignal(0)
   entity.setPortal(null)
   return entity;
