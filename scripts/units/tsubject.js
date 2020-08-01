@@ -1,5 +1,6 @@
 const key = Packages.arc.input.KeyCode;
 const col = require("clib");
+const plib = require("portallib")
 
 const bluePortalTrail = newEffect(10, e => {
   Draw.color(col.darkBlue, col.lightBlue, e.fin());
@@ -148,17 +149,8 @@ orangePortal.hitEffect = orangePortalHit;
 orangePortal.despawnEffect = Fx.none;
 
 const testSubject = extendContent(Mech, "test-subject", {
-  generateIcons(){
-    return [
-      Core.atlas.find(this.name + "-base"),
-      Core.atlas.find(this.name + "-leg"),
-      Core.atlas.find(this.name),
-      Core.atlas.find("portal-portal-equip")
-    ]
-  },
-
-  drawUnder(){
-    //Nothing
+  draw(player){
+    this.weapon.bullet == orangePortal ? plib.drawPortal(col.lightOrange, this.indRegion, player.x + 7, player.y + 7, 0) : plib.drawPortal(col.lightBlue, this.indRegion, player.x + 7, player.y + 7, 0)
   },
 
   updateAlt(player){
@@ -173,6 +165,11 @@ const testSubject = extendContent(Mech, "test-subject", {
     if(player.isBoosting){
       Call.onPlayerDeath(player)
     }
+  },
+
+  load(){
+    this.super$load();
+    this.indRegion = Core.atlas.find("portal-portal-indicator")
   }
 });
 

@@ -87,8 +87,8 @@ bPortal.entityType = prov(() => {
     },
 
     bundlePortal(){
-      if(entity.hasPortal()) return "Activated"
-      else { return "Deactivated" }
+      if(entity.hasPortal()) return "Enabled"
+      else { return "Disabled" }
     },
 
     getSignal(){
