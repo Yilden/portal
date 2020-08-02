@@ -35,7 +35,7 @@ const bPortal = extendContent(Block, "blue-portal", {
 
     this.bars.add("portal-disabling", new Func({
       get: function(entity){
-        return new Bar(prov(() => (Core.bundle.get("bar.portal.disabling") + entity.getTimer() + "s")), prov(() => clib.darkBlue), new Floatp({get: function(){
+        return new Bar(prov(() => (Core.bundle.get("bar.portal.disabling") + " " + entity.getTimer() + "s")), prov(() => clib.darkBlue), new Floatp({get: function(){
           return entity.getTimer();
           }
         }));
@@ -47,8 +47,9 @@ const bPortal = extendContent(Block, "blue-portal", {
     this.super$update(tile);
     entity = tile.ent();
 
-    v1 = Core.camera.unproject(Mathf.random() * Core.graphics.getWidth(), Mathf.random() * Core.graphics.getHeight());
-    htile = Vars.world.tileWorld(v1.x, v1.y);
+    v1 = Mathf.random(Vars.world.width());
+    v2 = Mathf.random(Vars.world.height());
+    htile = Vars.world.tile(v1, v2);
 
     if(Vars.state.is(GameState.State.playing)){
       if(htile != null && htile.block() instanceof Block){
@@ -75,8 +76,12 @@ const bPortal = extendContent(Block, "blue-portal", {
   },
 
   unitOn(tile, unit){
-    if(unit == Vars.player && entity.getPortal() !== null){
-      Vars.player.set(entity.getPortal().getX(), entity.getPortal().getY())
+    if(entity.getPortal() !== null){
+      if(unit == Vars.player){
+        unit.set(entity.getPortal().getX(), entity.getPortal().getY())
+      } else {
+        unit.move(entity.getPortal().getX() - tile.getX(), entity.getPortal().getY() - tile.getY())
+      }
     }
   }
 });
