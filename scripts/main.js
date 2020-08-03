@@ -20,7 +20,7 @@
   require("units/tsubject");
 
 //campaign
-  require("campaign/bportal")
+  require("campaign/portalb")
   //require("campaign/oportal")
 
 //libraries

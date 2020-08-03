@@ -49,10 +49,10 @@ const bluePortal = extend(BasicBulletType, {
       }
     }
 
-    if(tile.block().solid == false){
-      return false;
-    } else {
+    if(tile.block().solid || tile.block().name.startsWith("portal-portal")){
       return true;
+    } else {
+      return false;
     }
   },
 
@@ -126,10 +126,10 @@ const orangePortal = extend(BasicBulletType, {
     if(tile.block() instanceof Door){
       return (!tile.ent().open);
     }
-    if(tile.block().solid == false){
-      return false;
-    } else {
+    if(tile.block().solid || tile.block().name.startsWith("portal-portal")){
       return true;
+    } else {
+      return false;
     }
   },
 

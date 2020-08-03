@@ -1,7 +1,7 @@
 const plib = require("portallib")
 const clib = require("clib")
 
-const bPortal = extendContent(Block, "blue-portal", {
+const bPortal = extendContent(Block, "portal-blue", {
   load(){
     this.region = Core.atlas.find("portal-pmark")
   },
@@ -76,12 +76,11 @@ const bPortal = extendContent(Block, "blue-portal", {
   },
 
   unitOn(tile, unit){
-    if(entity.getPortal() !== null){
-      if(unit == Vars.player){
-        unit.set(entity.getPortal().getX(), entity.getPortal().getY())
-      } else {
-        unit.move(entity.getPortal().getX() - tile.getX(), entity.getPortal().getY() - tile.getY())
-      }
+    if(!entity.hasPortal()) return;
+    if(unit == Vars.player){
+      unit.set(entity.getPortal().getX(), entity.getPortal().getY())
+    } else {
+      unit.move(entity.getPortal().getX() - tile.getX(), entity.getPortal().getY() - tile.getY())
     }
   }
 });
