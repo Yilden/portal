@@ -32,15 +32,6 @@ const bPortal = extendContent(Block, "portal-blue", {
         }));
       }
     }));
-
-    this.bars.add("portal-disabling", new Func({
-      get: function(entity){
-        return new Bar(prov(() => (Core.bundle.get("bar.portal.disabling") + " " + entity.getTimer() + "s")), prov(() => clib.darkBlue), new Floatp({get: function(){
-          return entity.getTimer();
-          }
-        }));
-      }
-    }));
   },
 
   update(tile){
@@ -59,16 +50,6 @@ const bPortal = extendContent(Block, "portal-blue", {
           entity.setSignal(1)
         }
       }
-    }
-
-    if(entity.hasPortal() && entity.timer.get(this.portalTimer, 60)){
-      entity.setTimer(entity.getTimer() - 1)
-    }
-
-    if(entity.getTimer() <= 0){
-      entity.setPortal(null);
-      entity.setTimer(15)
-      entity.setSignal(0)
     }
 
     if(plib.isConductor(tile.getNearbyLink(0)) || plib.isConductor(tile.getNearbyLink(1)) || plib.isConductor(tile.getNearbyLink(2)) || plib.isConductor(tile.getNearbyLink(3))) return;
@@ -119,16 +100,7 @@ bPortal.entityType = prov(() => {
     setSignal(signal){
       this._signal = signal;
     },
-
-    getTimer(){
-      return this._timer;
-    },
-
-    setTimer(time){
-      this._timer = time;
-    }
   });
-  entity.setTimer(15)
   entity.setSignal(0)
   entity.setPortal(null)
   return entity;
