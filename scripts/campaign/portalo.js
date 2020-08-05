@@ -1,9 +1,9 @@
 const clib = require("clib")
-const hPortal = extendContent(ItemBridge, "portal-blue", {
+const hhPortal = extendContent(ItemBridge, "portal-orange", {
   setBars(){
     this.bars.add("portal", new Func({
       get: function(entity){
-        return new Bar(prov(() => (Core.bundle.get("bar.portal") + ": " + entity.bundlePortal())), prov(() => clib.darkOrange), new Floatp({get: function(){
+        return new Bar(prov(() => (Core.bundle.get("bar.portal") + ": " + entity.bundlePortal())), prov(() => clib.darkBlue), new Floatp({get: function(){
           return entity.getSignal();
           }
         }));
@@ -17,7 +17,7 @@ const hPortal = extendContent(ItemBridge, "portal-blue", {
 
     this.super$update(tile);
     rad = 5
-    if(linkedP != null && linkedP.block().name == "portal-portal-orange"){
+    if(linkedP != null && linkedP.block().name == "portal-portal-blue"){
       entity.setPortal(true)
       entity.setSignal(1)
       Vars.bulletGroup.intersect(tile.drawx() - rad, tile.drawy() - rad, rad * 2, rad * 2, cons(b => {
@@ -33,7 +33,7 @@ const hPortal = extendContent(ItemBridge, "portal-blue", {
   unitOn(tile, unit){
     entity = tile.ent()
     linkedP = Vars.world.tile(entity.link)
-    if(linkedP == null || linkedP.block().name != "portal-portal-orange") return;
+    if(linkedP == null || linkedP.block().name != "portal-portal-blue") return;
 
     if(unit instanceof Player) unit.set(linkedP.getX(), linkedP.getY())
     if(unit instanceof GroundUnit) unit.move(linkedP.getX() - tile.getX(), linkedP.getY() - tile.getY())
@@ -50,18 +50,18 @@ const hPortal = extendContent(ItemBridge, "portal-blue", {
     } else {
         return false;
     }
-    return other.block().name == "portal-portal-orange" && (!checkDouble || other.ent().link != tile.pos());
+    return other.block().name == "portal-portal-blue" && (!checkDouble || other.ent().link != tile.pos());
   }
 });
 
-hPortal.buildVisibility = BuildVisibility.sandboxOnly;
-hPortal.update = true;
-hPortal.destructible = false;
-hPortal.solid = false;
-hPortal.hasShadow = false;
-hPortal.requirements = ItemStack.with(Items.copper, 1)
-hPortal.range = 90;
-hPortal.entityType = prov(() => {
+hhPortal.buildVisibility = BuildVisibility.sandboxOnly;
+hhPortal.update = true;
+hhPortal.destructible = false;
+hhPortal.solid = false;
+hhPortal.hasShadow = false;
+hhPortal.requirements = ItemStack.with(Items.copper, 1)
+hhPortal.range = 90;
+hhPortal.entityType = prov(() => {
   const entity = extend(ItemBridge.ItemBridgeEntity, {
     hasPortal(){
       return this._hasportal;

@@ -43,13 +43,9 @@ const bluePortal = extend(BasicBulletType, {
 
   collides(b, tile){
     if(tile.block() instanceof Door){
-      if(tile.ent().open) return false;
-      else {
-        return true;
-      }
+      return (!tile.ent().open);
     }
-
-    if(tile.block().solid || tile.block().name.startsWith("portal-portal")){
+    if(tile.block().solid){
       return true;
     } else {
       return false;
@@ -126,7 +122,7 @@ const orangePortal = extend(BasicBulletType, {
     if(tile.block() instanceof Door){
       return (!tile.ent().open);
     }
-    if(tile.block().solid || tile.block().name.startsWith("portal-portal")){
+    if(tile.block().solid){
       return true;
     } else {
       return false;
