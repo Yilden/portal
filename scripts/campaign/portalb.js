@@ -1,3 +1,4 @@
+const plib = require("portallib")
 const clib = require("clib")
 const hPortal = extendContent(ItemBridge, "portal-blue", {
   setBars(){
@@ -9,6 +10,14 @@ const hPortal = extendContent(ItemBridge, "portal-blue", {
         }));
       }
     }));
+  },
+
+  draw(tile){
+    if(tile.getNearbyLink(0) && plib.isConductor(tile.getNearbyLink(0))) plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 0)
+    else if(tile.getNearbyLink(1) && plib.isConductor(tile.getNearbyLink(1))) plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 90)
+    else if(tile.getNearbyLink(2) && plib.isConductor(tile.getNearbyLink(2))) plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 180)
+    else if(tile.getNearbyLink(3) && plib.isConductor(tile.getNearbyLink(3))) plib.drawPortal(clib.darkBlue, this.region, tile.drawx(), tile.drawy(), 270)
+    else return;
   },
 
   update(tile){
@@ -28,6 +37,9 @@ const hPortal = extendContent(ItemBridge, "portal-blue", {
       entity.setPortal(false)
       entity.setSignal(0)
     }
+
+    if(plib.isConductor(tile.getNearbyLink(0)) || plib.isConductor(tile.getNearbyLink(1)) || plib.isConductor(tile.getNearbyLink(2)) || plib.isConductor(tile.getNearbyLink(3))) return;
+    else { tile.remove() }
   },
 
   unitOn(tile, unit){
